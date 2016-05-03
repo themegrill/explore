@@ -5,16 +5,16 @@
 jQuery(document).ready(function(){
 
    // For Search Icon Toggle effect added at the top
-   jQuery(".search-top").click(function(){
-      jQuery("#masthead .search-form-top").toggle();
+   jQuery('.search-top').click(function(){
+      jQuery('#masthead .search-form-top').toggle();
    });
 
-   jQuery(".header-widget-controller").click(function(){
-      jQuery(".header-widgets-wrapper").slideToggle('slow');
+   jQuery('.header-widget-controller').click(function(){
+      jQuery('.header-widgets-wrapper').slideToggle('slow');
    });
 
    // For scroll to top setting
-	jQuery("#scroll-up").hide();
+	jQuery('#scroll-up').hide();
 	jQuery(function () {
 		jQuery(window).scroll(function () {
 			if (jQuery(this).scrollTop() > 1000) {
@@ -32,28 +32,28 @@ jQuery(document).ready(function(){
 	});
 
    // For Header Sidebar Toggle effect added at the top
-   jQuery(".header-sidebar-ribbon").click(function(){
-      jQuery("#masthead .header-widgets-wrapper").slideToggle('slow');
+   jQuery('.header-sidebar-ribbon').click(function(){
+      jQuery('#masthead .header-widgets-wrapper').slideToggle('slow');
    });
 
    // Setting for the responsive video using fitvids
    if ( typeof jQuery.fn.fitVids !== 'undefined' ) {
-      jQuery(".fitvids-video").fitVids();
+      jQuery('.fitvids-video').fitVids();
    }
 
    // Setting for the sticky menu
    if ( typeof jQuery.fn.sticky !== 'undefined' ) {
       var wpAdminBar = jQuery('#wpadminbar');
       if (wpAdminBar.length) {
-         jQuery("#header-text-nav-container").sticky({topSpacing:wpAdminBar.height()});
+         jQuery('#header-text-nav-container').sticky({topSpacing:wpAdminBar.height()});
       } else {
-         jQuery("#header-text-nav-container").sticky({topSpacing:0});
+         jQuery('#header-text-nav-container').sticky({topSpacing:0});
       }
    }
 
    // Setting for the bxSlider
    if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
-      jQuery(".slider-rotate").bxSlider({
+      jQuery('.slider-rotate').bxSlider({
          mode: 'horizontal',
          speed: 1500,
          auto: true,

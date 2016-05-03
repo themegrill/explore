@@ -1,24 +1,17 @@
-# Explore WordPress Theme. Translation template file.
-# This file is distributed under the same license as the Explore Theme.
+# Copyright (C) 2016 ThemeGrill
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Explore\n"
-"POT-Creation-Date: 2016-01-20 16:07+0545\n"
-"PO-Revision-Date: 2016-01-20 16:08+0545\n"
-"Last-Translator: \n"
-"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
-"Language: en\n"
+"Project-Id-Version: Explore 1.0.4\n"
+"Report-Msgid-Bugs-To: themegrill@gmail.com\n"
+"POT-Creation-Date: 2016-05-02 12:00:10+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
 #: 404.php:22
 msgid "Oops! That page can&rsquo;t be found."
@@ -29,7 +22,6 @@ msgid "It looks like nothing was found at this location. Try the search below."
 msgstr ""
 
 #: comments.php:31
-#, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
@@ -56,11 +48,11 @@ msgid "Pages:"
 msgstr ""
 
 #: content-blog-image-large.php:40 content-blog-image-medium.php:38
-#: content.php:45 inc/functions.php:669 inc/widgets/widgets.php:240
+#: content.php:45 inc/widgets/widgets.php:240
 msgid "Read more"
 msgstr ""
 
-#: content-page.php:39 inc/functions.php:584 inc/functions.php:619
+#: content-page.php:39 inc/functions.php:583 inc/functions.php:618
 msgid "Edit"
 msgstr ""
 
@@ -68,15 +60,15 @@ msgstr ""
 msgid "Tagged on: "
 msgstr ""
 
-#: functions.php:44
+#: functions.php:66
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:45
+#: functions.php:67
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:46
+#: functions.php:68
 msgid "Footer Menu"
 msgstr ""
 
@@ -141,8 +133,7 @@ msgid "Header Logo"
 msgstr ""
 
 #: inc/customizer.php:96
-msgid ""
-"Upload logo for your header. Recommended image size is 100 X 100 pixels."
+msgid "Upload logo for your header. Recommended image size is 100 X 100 pixels."
 msgstr ""
 
 #: inc/customizer.php:110
@@ -183,8 +174,8 @@ msgstr ""
 
 #: inc/customizer.php:158
 msgid ""
-"Position Above (Default): Display the Header image just above the site title "
-"and main menu part."
+"Position Above (Default): Display the Header image just above the site "
+"title and main menu part."
 msgstr ""
 
 #: inc/customizer.php:159
@@ -219,9 +210,9 @@ msgstr ""
 
 #: inc/customizer.php:269
 msgid ""
-"Select default layout. This layout will be reflected in whole site archives, "
-"search etc. The layout for a single post and page can be controlled from "
-"below options."
+"Select default layout. This layout will be reflected in whole site "
+"archives, search etc. The layout for a single post and page can be "
+"controlled from below options."
 msgstr ""
 
 #: inc/customizer.php:284
@@ -240,8 +231,8 @@ msgstr ""
 
 #: inc/customizer.php:323
 msgid ""
-"Select default layout for single posts. This layout will be reflected in all "
-"single posts unless unique layout is set for specific post."
+"Select default layout for single posts. This layout will be reflected in "
+"all single posts unless unique layout is set for specific post."
 msgstr ""
 
 #: inc/customizer.php:338
@@ -274,8 +265,8 @@ msgstr ""
 
 #: inc/customizer.php:375
 msgid ""
-"This will reflect in links, buttons and many others. Choose a color to match "
-"your site."
+"This will reflect in links, buttons and many others. Choose a color to "
+"match your site."
 msgstr ""
 
 #: inc/customizer.php:383
@@ -394,28 +385,8 @@ msgstr ""
 msgid "Enter link to redirect for the second button."
 msgstr ""
 
-#: inc/functions.php:30
-msgctxt "PT Sans font: on or off"
-msgid "on"
-msgstr ""
-
-#: inc/functions.php:38
-msgctxt "Add new subset (cyrillic)"
-msgid "no-subset"
-msgstr ""
-
 #: inc/functions.php:327
 msgid "Post navigation"
-msgstr ""
-
-#: inc/functions.php:331 navigation.php:42
-msgctxt "Previous post link"
-msgid "&larr;"
-msgstr ""
-
-#: inc/functions.php:332 navigation.php:43
-msgctxt "Next post link"
-msgid "&rarr;"
 msgstr ""
 
 #: inc/functions.php:337
@@ -439,12 +410,10 @@ msgid "Post author"
 msgstr ""
 
 #: inc/functions.php:385
-#, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
 #: inc/functions.php:387
-#, php-format
 msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
 msgstr ""
 
@@ -460,57 +429,53 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: inc/functions.php:420
+#. Author of the plugin/theme
 msgid "ThemeGrill"
 msgstr ""
 
 #: inc/functions.php:422
-#, php-format
 msgid "Copyright &copy; %1$s %2$s. All rights reserved."
 msgstr ""
 
 #: inc/functions.php:422
-#, php-format
 msgid "Powered by %s."
 msgstr ""
 
 #: inc/functions.php:422
-#, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:573
-#, php-format
+#: inc/functions.php:572
 msgid ""
-"<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">"
-"%3$s</a></span>"
+"<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" "
+"rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:581
+#: inc/functions.php:580
 msgid "0 <i class=\"fa fa-comment\"></i>"
 msgstr ""
 
-#: inc/functions.php:581
+#: inc/functions.php:580
 msgid "1 <i class=\"fa fa-comment\"></i>"
 msgstr ""
 
-#: inc/functions.php:581
+#: inc/functions.php:580
 msgid "% <i class=\"fa fa-comments\"></i>"
 msgstr ""
 
-#: inc/functions.php:617
+#: inc/functions.php:616
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:617
+#: inc/functions.php:616
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:617
+#: inc/functions.php:616
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:617
+#: inc/functions.php:616
 msgid "Comments Off"
 msgstr ""
 
@@ -519,22 +484,18 @@ msgid "Read More"
 msgstr ""
 
 #: inc/header-functions.php:149
-#, php-format
 msgid "Author: %s"
 msgstr ""
 
 #: inc/header-functions.php:157
-#, php-format
 msgid "Day: %s"
 msgstr ""
 
 #: inc/header-functions.php:160
-#, php-format
 msgid "Month: %s"
 msgstr ""
 
 #: inc/header-functions.php:163
-#, php-format
 msgid "Year: %s"
 msgstr ""
 
@@ -595,10 +556,9 @@ msgid "You May Also Like"
 msgstr ""
 
 #: inc/related-posts.php:45
-#, php-format
 msgid ""
-"<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark"
-"\"><i class=\"fa fa-calendar-o\"></i> %3$s</a></span>"
+"<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" "
+"rel=\"bookmark\"><i class=\"fa fa-calendar-o\"></i> %3$s</a></span>"
 msgstr ""
 
 #: inc/widgets/widgets.php:20
@@ -718,9 +678,7 @@ msgid "Next &rarr;"
 msgstr ""
 
 #: no-results.php:18
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: no-results.php:22
@@ -744,11 +702,10 @@ msgid "Example Widget"
 msgstr ""
 
 #: sidebar-left.php:19
-#, php-format
 msgid ""
-"This is an example widget to show how the Left sidebar looks by default. You "
-"can add custom widgets from the %swidgets screen%s in the admin. If custom "
-"widgets are added then this will be replaced by those widgets."
+"This is an example widget to show how the Left sidebar looks by default. "
+"You can add custom widgets from the %swidgets screen%s in the admin. If "
+"custom widgets are added then this will be replaced by those widgets."
 msgstr ""
 
 #: sidebar.php:14
@@ -764,9 +721,60 @@ msgid "Contact Page"
 msgstr ""
 
 #: sidebar.php:37
-#, php-format
 msgid ""
 "This is an example widget to show how the %s sidebar looks by default. You "
 "can add custom widgets from the %swidgets screen%s in the admin. If custom "
 "widgets are added then this will be replaced by those widgets."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Explore"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://themegrill.com/themes/explore"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Explore is an incredibly flexible multipurpose responsive theme coded & "
+"designed with a lot of care and love."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themegrill.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Business Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Contact Page Template"
+msgstr ""
+
+#: inc/functions.php:30
+#. Translators: If there are characters in your language that are not supported
+#. by PT Sans, translate this to 'off'. Do not translate into your own
+#. language.
+msgctxt "PT Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/functions.php:38
+#. Translators: To add an additional character subset specific to your
+#. language, translate this to 'cyrillic'. Do not translate into your own
+#. language.
+msgctxt "Add new subset (cyrillic)"
+msgid "no-subset"
+msgstr ""
+
+#: inc/functions.php:331 navigation.php:42
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: inc/functions.php:332 navigation.php:43
+msgctxt "Next post link"
+msgid "&rarr;"
 msgstr ""
