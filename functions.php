@@ -147,4 +147,15 @@ require_once( EXPLORE_ADMIN_DIR . '/meta-boxes.php' );
 
 /** Load Widgets and Widgetized Area */
 require_once( EXPLORE_WIDGETS_DIR . '/widgets.php' );
+
+/**
+ * Assign the Explore version to a variable.
+ */
+$theme            = wp_get_theme( 'explore' );
+$explore_version = $theme['Version'];
+
+/* Calling in the admin area for the Welcome Page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-explore-admin.php';
+}
 ?>

@@ -50,7 +50,7 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
 = Version 1.0.4 =
 * Fontawesome icons updated to version 4.5.0
 * Screenshot changed
