@@ -23,6 +23,7 @@ class Explore_Admin {
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+		add_action( 'wp_loaded', array( __CLASS__, 'hide_notices' ) );
 		add_action( 'load-themes.php', array( $this, 'admin_notice' ) );
 	}
 
@@ -49,10 +50,36 @@ class Explore_Admin {
 	 * Add admin notice.
 	 */
 	public function admin_notice() {
-		global $pagenow;
+		global $explore_version, $pagenow;
 
+		wp_enqueue_style( 'explore-message', get_template_directory_uri() . '/css/admin/message.css', array(), $explore_version );
+
+		// Let's bail on theme activation.
 		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
+			update_option( 'explore_admin_notice_welcome', 1 );
+
+		// No option? Let run the notice wizard again..
+		} elseif( ! get_option( 'explore_admin_notice_welcome' ) ) {
+			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
+		}
+	}
+
+	/**
+	 * Hide a notice if the GET variable is set.
+	 */
+	public static function hide_notices() {
+		if ( isset( $_GET['explore-hide-notice'] ) && isset( $_GET['_explore_notice_nonce'] ) ) {
+			if ( ! wp_verify_nonce( $_GET['_explore_notice_nonce'], 'explore_hide_notices_nonce' ) ) {
+				wp_die( __( 'Action failed. Please refresh the page and retry.', 'explore' ) );
+			}
+
+			if ( ! current_user_can( 'manage_options' ) ) {
+				wp_die( __( 'Cheatin&#8217; huh?', 'explore' ) );
+			}
+
+			$hide_notice = sanitize_text_field( $_GET['explore-hide-notice'] );
+			update_option( 'explore_admin_notice_' . $hide_notice, 1 );
 		}
 	}
 
@@ -61,9 +88,12 @@ class Explore_Admin {
 	 */
 	public function welcome_notice() {
 		?>
-		<div class="updated notice is-dismissible">
-			<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Explore! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'explore' ), '<a href="' . esc_url( admin_url( 'themes.php?page=explore-welcome' ) ) . '">', '</a>' ); ?></p>
-			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=explore-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php esc_html_e( 'Get started with Explore', 'explore' ); ?></a></p>
+		<div id="message" class="updated explore-message">
+			<a class="explore-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'explore-hide-notice', 'welcome' ) ), 'explore_hide_notices_nonce', '_explore_notice_nonce' ) ); ?>"><?php esc_html_e( 'Dismiss', 'explore' ); ?></a>
+			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing explore! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'explore' ), '<a href="' . esc_url( admin_url( 'themes.php?page=explore-welcome' ) ) . '">', '</a>' ); ?></p>
+			<p class="submit">
+				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=explore-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Explore', 'explore' ); ?></a>
+			</p>
 		</div>
 		<?php
 	}
