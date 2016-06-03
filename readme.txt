@@ -51,6 +51,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Updated theme tags as per new introduced tags.
+* Tweaks - Introduced welcome page for theme.
+
 = Version 1.0.4 =
 * Fontawesome icons updated to version 4.5.0
 * Screenshot changed
