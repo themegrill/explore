@@ -146,19 +146,19 @@ class Explore_Admin {
 			<div class="changelog point-releases">
 				<div class="under-the-hood two-col">
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Theme Customizer', 'explore' ); ?></h3>
+						<h3><?php esc_html_e( 'Theme Customizer', 'explore' ); ?></h3>
 						<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'explore' ) ?></p>
 						<p><a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-secondary"><?php esc_html_e( 'Customize', 'explore' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Documentation', 'explore' ); ?></h3>
+						<h3><?php esc_html_e( 'Documentation', 'explore' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'explore' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/explore/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'explore' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got theme support question?', 'explore' ); ?></h3>
+						<h3><?php esc_html_e( 'Got theme support question?', 'explore' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'explore' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'explore' ); ?></a></p>
 					</div>
@@ -166,7 +166,7 @@ class Explore_Admin {
 					<div class="col">
 						<h3>
 							<?php
-							echo esc_html_e( 'Translate', 'explore' );
+							esc_html_e( 'Translate', 'explore' );
 							echo ' ' . $theme->display( 'Name' );
 							?>
 						</h3>
@@ -186,10 +186,10 @@ class Explore_Admin {
 			<div class="return-to-dashboard explore">
 				<?php if ( current_user_can( 'update_core' ) && isset( $_GET['updated'] ) ) : ?>
 					<a href="<?php echo esc_url( self_admin_url( 'update-core.php' ) ); ?>">
-						<?php is_multisite() ? esc_html_e( 'Return to Updates' ) : esc_html_e( 'Return to Dashboard &rarr; Updates' ); ?>
+						<?php is_multisite() ? esc_html_e( 'Return to Updates', 'explore' ) : esc_html_e( 'Return to Dashboard &rarr; Updates', 'explore' ); ?>
 					</a> |
 				<?php endif; ?>
-				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Go to Dashboard &rarr; Home' ) : esc_html_e( 'Go to Dashboard' ); ?></a>
+				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Go to Dashboard &rarr; Home', 'explore' ) : esc_html_e( 'Go to Dashboard', 'explore' ); ?></a>
 			</div>
 		</div>
 		<?php
@@ -259,11 +259,17 @@ class Explore_Admin {
 
 			<?php $this->intro(); ?>
 
-			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins.', 'explore' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins:', 'explore' ); ?></p>
 			<ol>
-				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'explore'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'explore'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">Breadcrumb NavXT</a>', 'explore'), esc_url('https://wordpress.org/plugins/breadcrumb-navxt/')); ?></li>
+				<li><a href="<?php echo esc_url('https://wordpress.org/plugins/social-icons/'); ?>" target="_blank"><?php esc_html_e('Social Icons', 'explore'); ?></a>
+					<?php esc_html_e(' by ThemeGrill', 'explore'); ?>
+				</li>
+				<li><a href="<?php echo esc_url('https://wordpress.org/plugins/easy-social-sharing/'); ?>" target="_blank"><?php esc_html_e('Easy Social Sharing', 'explore' ); ?></a>
+					<?php esc_html_e(' by ThemeGrill', 'explore'); ?>
+				</li>
+				<li><a href="<?php echo esc_url('https://wordpress.org/plugins/contact-form-7/'); ?>" target="_blank"><?php esc_html_e('Contact Form 7', 'explore'); ?></a></li>
+				<li><a href="<?php echo esc_url('https://wordpress.org/plugins/wp-pagenavi/'); ?>" target="_blank"><?php esc_html_e('WP-PageNavi', 'explore'); ?></a></li>
+				<li><a href="<?php echo esc_url('https://wordpress.org/plugins/breadcrumb-navxt/'); ?>" target="_blank"><?php esc_html_e('Breadcrumb NavXT', 'explore'); ?></a></li>
 			</ol>
 
 		</div>
