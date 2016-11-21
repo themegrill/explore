@@ -86,6 +86,7 @@ function explore_customize_register( $wp_customize ) {
       'panel' => 'explore_header_options'
    ));
 
+   if ( !function_exists('the_custom_logo') || ( get_theme_mod('explore_header_logo_image', '') != '' ) ) {
    $wp_customize->add_setting('explore_header_logo_image', array(
       'default' => '',
       'capability' => 'edit_theme_options',
@@ -97,6 +98,7 @@ function explore_customize_register( $wp_customize ) {
       'section' => 'explore_header_logo',
       'setting' => 'explore_header_logo_image'
    )));
+}
 
    // Header logo and text display type option
    $wp_customize->add_setting('explore_show_header_logo_text', array(

@@ -621,4 +621,15 @@ if ( !function_exists('explore_entry_meta') ) :
       <?php endif;
    }
 endif;
+// Displays the site logo
+if ( ! function_exists( 'explore_the_custom_logo' ) ) {
+  /**
+   * Displays the optional custom logo.
+   */
+  function explore_the_custom_logo() {
+    if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'explore_header_logo_image','' ) == '') ) {
+      the_custom_logo();
+    }
+  }
+}
 ?>
