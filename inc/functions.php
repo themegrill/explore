@@ -621,4 +621,21 @@ if ( !function_exists('explore_entry_meta') ) :
       <?php endif;
    }
 endif;
+
+/**
+ * Making the theme Woocommrece compatible
+ */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+add_action('woocommerce_before_main_content', 'explore_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'explore_wrapper_end', 10);
+function explore_wrapper_start() {
+  echo '<div id="primary">';
+}
+function explore_wrapper_end() {
+  echo '</div>';
+}
+
 ?>

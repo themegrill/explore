@@ -61,6 +61,9 @@ function explore_setup() {
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
 	add_theme_support( 'post-thumbnails' );
 
+	// Added WooCommerce support.
+   	add_theme_support( 'woocommerce' );
+
 	// Registering navigation menus.
    register_nav_menus( array(
       'social' => esc_html__( 'Social Menu', 'explore' ),
