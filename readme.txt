@@ -52,7 +52,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-=Version 1.0.5 TBD =
+=Version 1.0.6 TBD =
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
 
 = Version 1.0.5 =
