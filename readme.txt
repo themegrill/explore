@@ -51,6 +51,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+
+= Version TBD =
+* Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
+
 = Version 1.0.5 =
 * Tweaks - Updated theme tags as per new introduced tags.
 * Tweaks - Introduced welcome page for theme.
