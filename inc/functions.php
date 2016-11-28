@@ -267,6 +267,9 @@ function explore_body_class( $classes ) {
 	else {
 		$classes[] = '';
 	}
+	if ( get_theme_mod( 'explore_new_menu', 0 ) == 1 ) {
+      $classes[] = 'better-responsive-menu';
+   }
 
 	return $classes;
 }

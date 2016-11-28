@@ -159,6 +159,24 @@ function explore_customize_register( $wp_customize ) {
          'below' => __( 'Position Below: Display the Header image just below the site title and main menu part.', 'explore' )
       )
    ));
+
+   // New Responsive Menu
+   $wp_customize->add_section('explore_new_menu_style', array(
+      'priority' => 4,
+      'title' => esc_html__('Responsive Menu Style', 'explore'),
+      'panel' => 'explore_header_options'
+   ));
+   $wp_customize->add_setting('explore_new_menu', array(
+      'default' => 0,
+      'capability' => 'edit_theme_options',
+      'sanitize_callback' => 'explore_checkbox_sanitize'
+   ));
+   $wp_customize->add_control('explore_new_menu', array(
+      'type' => 'checkbox',
+      'label' => esc_html__('Switch to new responsive menu', 'explore'),
+      'section' => 'explore_new_menu_style',
+      'settings' => 'explore_new_menu'
+   ));
    // End of the Header Options
 
    // Start of the Design Options

@@ -51,6 +51,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Feature - Added new responsive menu design.
+
 = Version 1.0.5 =
 * Tweaks - Updated theme tags as per new introduced tags.
 * Tweaks - Introduced welcome page for theme.
