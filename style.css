@@ -2261,8 +2261,11 @@ a#scroll-up:hover {
 .better-responsive-menu .main-navigation ul li ul::before{
 	display: none;
 }
-.better-responsive-menu .main-navigation li > ul{
-	margin: 0 0 0 20px;
+.better-responsive-menu #masthead .main-navigation ul li ul li a {
+    padding-left: 20px;
+}
+.better-responsive-menu #masthead .main-navigation ul li ul li ul li a {
+    padding-left: 40px;
 }
 }
 @media screen and (max-width: 600px) {
