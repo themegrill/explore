@@ -2261,6 +2261,9 @@ a#scroll-up:hover {
 .better-responsive-menu .main-navigation ul li ul::before{
 	display: none;
 }
+.better-responsive-menu .main-navigation li > ul{
+	margin: 0 0 0 20px;
+}
 }
 @media screen and (max-width: 600px) {
    #featured-wide-slider .slider-title-head .entry-title a { font-size: 24px; }
