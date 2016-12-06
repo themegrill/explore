@@ -2188,7 +2188,7 @@ a#scroll-up:hover {
       display: block;
       font-size: 16px;
       padding: 10px 0;
-      width: 100%;
+      width: auto;
    }
 .better-responsive-menu .menu li .sub-toggle,
 .better-responsive-menu .menu li ul li .sub-toggle {
