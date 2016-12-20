@@ -401,6 +401,7 @@ function explore_customize_register( $wp_customize ) {
       )
    ));
 
+if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
    // Custom CSS setting
    $wp_customize->add_section('explore_custom_css_section', array(
       'priority' => 9,
@@ -421,6 +422,7 @@ function explore_customize_register( $wp_customize ) {
       'section' => 'explore_custom_css_section',
       'settings' => 'explore_custom_css'
    ));
+}
    // End of the Design Options
 
    // Start of the Additional Options

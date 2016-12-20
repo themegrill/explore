@@ -290,8 +290,8 @@ function explore_custom_css() {
 		<?php
 	}
 
-	$explore_custom_css = get_theme_mod( 'explore_custom_css', '' );
-	if( !empty( $explore_custom_css ) ) {
+	$explore_custom_css = get_theme_mod( 'explore_custom_css' );
+	if( $explore_custom_css && ! function_exists( 'wp_update_custom_css_post') ) {
 		?>
 		<style type="text/css"><?php echo $explore_custom_css; ?></style>
 		<?php
@@ -621,4 +621,23 @@ if ( !function_exists('explore_entry_meta') ) :
       <?php endif;
    }
 endif;
-?>
+
+/**
+  * Migrate any existing theme CSS codes added in Customize Options to the core option added in WordPress 4.7
+  */
+ function explore_custom_css_migrate() {
+
+ 	if ( function_exists( 'wp_update_custom_css_post' ) ) {
+		$custom_css = get_theme_mod( 'explore_custom_css' );
+		if ( $custom_css ) {
+			$core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
+			$return = wp_update_custom_css_post( $core_css . $custom_css );
+			if ( ! is_wp_error( $return ) ) {
+				// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
+				remove_theme_mod( 'explore_custom_css' );
+			}
+		}
+	}
+}
+
+add_action( 'after_setup_theme', 'explore_custom_css_migrate' );
