@@ -784,9 +784,9 @@ li.default-menu {
 
 /* =RESPONSIVE MENU - 2
 ----------------------------------------------- */
-.better-responsive-menu .main-navigation li.menu-item-has-children > a::after, 
-.better-responsive-menu .main-navigation li li.menu-item-has-children > a::after, 
-.better-responsive-menu .main-navigation li.page_item_has_children > a::after, 
+.better-responsive-menu .main-navigation li.menu-item-has-children > a::after,
+.better-responsive-menu .main-navigation li li.menu-item-has-children > a::after,
+.better-responsive-menu .main-navigation li.page_item_has_children > a::after,
 .better-responsive-menu .main-navigation li li.page_item_has_children > a::after{
 	display: none;
 }
@@ -2189,6 +2189,8 @@ a#scroll-up:hover {
       font-size: 16px;
       padding: 10px 0;
       width: auto;
+      height: auto;
+      line-height: 24px;
    }
 .better-responsive-menu .menu li .sub-toggle,
 .better-responsive-menu .menu li ul li .sub-toggle {
@@ -2212,7 +2214,7 @@ a#scroll-up:hover {
 	transform: none;
 }
 .better-responsive-menu .menu li .sub-toggle:hover{
-    background-color: #3a9eb4;	
+    background-color: #3a9eb4;
 }
 .better-responsive-menu #site-navigation{
 	position: relative;
@@ -2242,18 +2244,18 @@ a#scroll-up:hover {
     width: 100%;
     padding: 0;
 }
-.better-responsive-menu .main-navigation ul li:hover ul, 
-.better-responsive-menu .main-navigation ul ul li:hover ul, 
-.better-responsive-menu .main-navigation ul ul ul li:hover ul, 
-.better-responsive-menu .main-navigation ul ul ul ul li:hover ul, 
+.better-responsive-menu .main-navigation ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul ul ul li:hover ul,
 .better-responsive-menu .main-navigation ul ul ul ul ul li:hover ul{
 	display: none;
 }
 
-.better-responsive-menu .main-navigation ul li ul, 
-.better-responsive-menu .main-navigation ul li:hover ul ul, 
-.better-responsive-menu .main-navigation ul ul li:hover ul ul, 
-.better-responsive-menu .main-navigation ul ul ul li:hover ul ul, 
+.better-responsive-menu .main-navigation ul li ul,
+.better-responsive-menu .main-navigation ul li:hover ul ul,
+.better-responsive-menu .main-navigation ul ul li:hover ul ul,
+.better-responsive-menu .main-navigation ul ul ul li:hover ul ul,
 .better-responsive-menu .main-navigation ul ul ul ul li:hover ul ul{
 	box-shadow: none;
 	background-color: rgba(0,0,0,0);
