@@ -86,17 +86,19 @@ function explore_customize_register( $wp_customize ) {
       'panel' => 'explore_header_options'
    ));
 
-   $wp_customize->add_setting('explore_header_logo_image', array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esc_url_raw'
-   ));
+	if ( ! function_exists('the_custom_logo') ) {
+		$wp_customize->add_setting('explore_header_logo_image', array(
+			'default' => '',
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw'
+		));
 
-   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'explore_header_logo_image', array(
-      'label' => __('Upload logo for your header. Recommended image size is 100 X 100 pixels.', 'explore'),
-      'section' => 'explore_header_logo',
-      'setting' => 'explore_header_logo_image'
-   )));
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'explore_header_logo_image', array(
+			'label' => __('Upload logo for your header. Recommended image size is 100 X 100 pixels.', 'explore'),
+			'section' => 'explore_header_logo',
+			'setting' => 'explore_header_logo_image'
+		)));
+	}
 
    // Header logo and text display type option
    $wp_customize->add_setting('explore_show_header_logo_text', array(
@@ -401,6 +403,7 @@ function explore_customize_register( $wp_customize ) {
       )
    ));
 
+if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
    // Custom CSS setting
    $wp_customize->add_section('explore_custom_css_section', array(
       'priority' => 9,
@@ -421,6 +424,7 @@ function explore_customize_register( $wp_customize ) {
       'section' => 'explore_custom_css_section',
       'settings' => 'explore_custom_css'
    ));
+}
    // End of the Design Options
 
    // Start of the Additional Options
@@ -655,4 +659,4 @@ function explore_customize_register( $wp_customize ) {
 }
 
 add_action('customize_register', 'explore_customize_register');
-?>
+
