@@ -685,7 +685,8 @@ li.default-menu {
 .main-navigation ul li.current-menu-ancestor a,
 .main-navigation ul li.current_page_item a,
 .main-navigation ul li:hover > a,
-.main-navigation li.menu-item-has-children:hover > a:after {
+.main-navigation li.menu-item-has-children:hover > a:after,
+.better-responsive-menu .menu li:hover .sub-toggle .fa {
 	color: #4cb0c6;
 }
 .main-navigation li.menu-item-has-children > a:after,
@@ -781,6 +782,35 @@ li.default-menu {
 	display: none;
 }
 
+/* =RESPONSIVE MENU - 2
+----------------------------------------------- */
+.better-responsive-menu .main-navigation li.menu-item-has-children > a::after,
+.better-responsive-menu .main-navigation li li.menu-item-has-children > a::after,
+.better-responsive-menu .main-navigation li.page_item_has_children > a::after,
+.better-responsive-menu .main-navigation li li.page_item_has_children > a::after{
+	display: none;
+}
+
+.better-responsive-menu .menu li .sub-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 14px;
+}
+.better-responsive-menu .menu li ul li .sub-toggle{
+	right: 15px;
+	top: 7px;
+	transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
 /* =SOCIAL MENU
 ----------------------------------------------- */
 #menu-social { float: right; }
@@ -2158,8 +2188,87 @@ a#scroll-up:hover {
       display: block;
       font-size: 16px;
       padding: 10px 0;
-      width: 100%;
+      width: auto;
+      height: auto;
+      line-height: 24px;
    }
+.better-responsive-menu .menu li .sub-toggle,
+.better-responsive-menu .menu li ul li .sub-toggle {
+    right: 15px;
+    top: 8px;
+    background-color: #4CB0C6;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transform: none;
+}
+.better-responsive-menu .menu li .sub-toggle .fa,
+.better-responsive-menu .menu li:hover .sub-toggle .fa{
+	color: #fff;
+}
+.better-responsive-menu .menu li ul li .sub-toggle{
+	transform: none;
+}
+.better-responsive-menu .menu li .sub-toggle:hover{
+    background-color: #3a9eb4;
+}
+.better-responsive-menu #site-navigation{
+	position: relative;
+}
+.better-responsive-menu .main-navigation a{
+	float: none;
+}
+.better-responsive-menu .main-navigation ul.menu ,
+.better-responsive-menu .main-small-navigation ul.menu {
+    background-color: #303440;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 9;
+}
+.better-responsive-menu .main-navigation ul li ul{
+	position: unset;
+	width: 100%;
+}
+.better-responsive-menu .main-navigation ul li ul li{
+	border: none;
+}
+.better-responsive-menu .main-navigation li,
+.better-responsive-menu .main-small-navigation li {
+    text-align: left;
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+.better-responsive-menu .main-navigation ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul ul ul li:hover ul,
+.better-responsive-menu .main-navigation ul ul ul ul ul li:hover ul{
+	display: none;
+}
+
+.better-responsive-menu .main-navigation ul li ul,
+.better-responsive-menu .main-navigation ul li:hover ul ul,
+.better-responsive-menu .main-navigation ul ul li:hover ul ul,
+.better-responsive-menu .main-navigation ul ul ul li:hover ul ul,
+.better-responsive-menu .main-navigation ul ul ul ul li:hover ul ul{
+	box-shadow: none;
+	background-color: rgba(0,0,0,0);
+}
+.better-responsive-menu .main-navigation ul li ul::before{
+	display: none;
+}
+.better-responsive-menu #masthead .main-navigation ul li ul li a {
+    padding-left: 20px;
+}
+.better-responsive-menu #masthead .main-navigation ul li ul li ul li a {
+    padding-left: 40px;
+}
 }
 @media screen and (max-width: 600px) {
    #featured-wide-slider .slider-title-head .entry-title a { font-size: 24px; }
