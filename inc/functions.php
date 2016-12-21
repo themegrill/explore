@@ -105,10 +105,8 @@ function explore_scripts_styles_method() {
    // enqueueing fontawesome icons
    wp_enqueue_style( 'explore-fontawesome', get_template_directory_uri().'/font-awesome/css/font-awesome' . $suffix . '.css', array(), '4.4.0' );
 
-   $explore_user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-	if(preg_match('/(?i)msie [1-8]/',$explore_user_agent)) {
-		wp_enqueue_script( 'html5', EXPLORE_JS_URL . '/html5shiv' . $suffix . '.js', true );
-	}
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.3', false );
+	wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );
 
 }
 
