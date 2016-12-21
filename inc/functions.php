@@ -267,8 +267,40 @@ function explore_body_class( $classes ) {
 	else {
 		$classes[] = '';
 	}
+	if ( get_theme_mod( 'explore_new_menu', '0' ) == 1 ) {
+      $classes[] = 'better-responsive-menu';
+   }
 
 	return $classes;
+}
+
+/****************************************************************************************/
+
+/**
+ * Generate darker color
+ * Source: http://stackoverflow.com/questions/3512311/how-to-generate-lighter-darker-color-with-php
+ */
+function explore_darkcolor($hex, $steps) {
+   // Steps should be between -255 and 255. Negative = darker, positive = lighter
+   $steps = max(-255, min(255, $steps));
+
+   // Normalize into a six character long hex string
+   $hex = str_replace('#', '', $hex);
+   if (strlen($hex) == 3) {
+      $hex = str_repeat(substr($hex,0,1), 2).str_repeat(substr($hex,1,1), 2).str_repeat(substr($hex,2,1), 2);
+   }
+
+   // Split into three parts: R, G and B
+   $color_parts = str_split($hex, 2);
+   $return = '#';
+
+   foreach ($color_parts as $color) {
+      $color   = hexdec($color); // Convert to decimal
+      $color   = max(0,min(255,$color + $steps)); // Adjust color
+      $return .= str_pad(dechex($color), 2, '0', STR_PAD_LEFT); // Make two char hex code
+   }
+
+   return $return;
 }
 
 /****************************************************************************************/
@@ -279,9 +311,10 @@ add_action('wp_head', 'explore_custom_css');
  */
 function explore_custom_css() {
 	$primary_color = get_theme_mod( 'explore_primary_color', '#4cb0c6' );
+	$primary_dark    = explore_darkcolor($primary_color, -50);
 	$explore_internal_css = '';
 	if( $primary_color != '#4cb0c6' ) {
-		$explore_internal_css = ' #controllers a.active,#controllers a:hover,.comments-area .comment-author-link span,.explore-button,.fa.header-widget-controller,.pagination span,.post .entry-meta .read-more-link,.social-links i.fa:hover,a#scroll-up,button,input[type=reset],input[type=button],input[type=submit]{background-color:'.$primary_color.'}#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,#controllers a.active,#controllers a:hover,#featured-wide-slider .slider-title-head .entry-title a:hover,#site-title a:hover,#wp-calendar #today,.comment .comment-reply-link:hover,.comments-area .comment-author-link a:hover,.footer-widgets-area a:hover,.main-navigation a:hover,.main-navigation li.menu-item-has-children:hover>a:after,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor a,.main-navigation ul li.current-menu-item a,.main-navigation ul li.current-menu-item a:after,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current_page_ancestor a,.main-navigation ul li.current_page_item a,.main-navigation ul li:hover>a,.more-link,.nav-next a:hover,.nav-previous a:hover,.next a:hover,.page .entry-title a:hover,.pagination a span:hover,.post .entry-meta a:hover,.post .entry-title a:hover,.previous a:hover,.read-more,.services-page-title a:hover,.single #content .tags a:hover,.slide-next i,.slide-prev i,.social-links i.fa,.type-page .entry-meta a:hover,a{color:'.$primary_color.'}blockquote{border-left:3px solid '.$primary_color.'}#header-text-nav-container{border-top:2px solid '.$primary_color.'}.social-links i.fa{border:1px solid '.$primary_color.'}#featured-wide-slider .slider-read-more-button a.slider-first-button,#featured-wide-slider .slider-read-more-button a.slider-second-button:hover{border:2px solid '.$primary_color.';background-color:'.$primary_color.'}a.slide-next,a.slide-prev{border:2px solid '.$primary_color.'}.breadcrumb a,.tg-one-fourth .widget-title a:hover,.tg-one-half .widget-title a:hover,.tg-one-third .widget-title a:hover{color:'.$primary_color.'}.pagination a span:hover{border-color:'.$primary_color.'}.header-widgets-wrapper,.widget-title span{border-bottom:2px solid '.$primary_color.'}';
+		$explore_internal_css = ' #controllers a.active,#controllers a:hover,.comments-area .comment-author-link span,.explore-button,.fa.header-widget-controller,.pagination span,.post .entry-meta .read-more-link,.social-links i.fa:hover,a#scroll-up,button,input[type=reset],input[type=button],input[type=submit]{background-color:'.$primary_color.'}#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,#controllers a.active,#controllers a:hover,#featured-wide-slider .slider-title-head .entry-title a:hover,#site-title a:hover,#wp-calendar #today,.comment .comment-reply-link:hover,.comments-area .comment-author-link a:hover,.footer-widgets-area a:hover,.main-navigation a:hover,.main-navigation li.menu-item-has-children:hover>a:after,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor a,.main-navigation ul li.current-menu-item a,.main-navigation ul li.current-menu-item a:after,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current_page_ancestor a,.main-navigation ul li.current_page_item a,.main-navigation ul li:hover>a,.more-link,.nav-next a:hover,.nav-previous a:hover,.next a:hover,.page .entry-title a:hover,.pagination a span:hover,.post .entry-meta a:hover,.post .entry-title a:hover,.previous a:hover,.read-more,.services-page-title a:hover,.single #content .tags a:hover,.slide-next i,.slide-prev i,.social-links i.fa,.type-page .entry-meta a:hover,a{color:'.$primary_color.'}blockquote{border-left:3px solid '.$primary_color.'}#header-text-nav-container{border-top:2px solid '.$primary_color.'}.social-links i.fa{border:1px solid '.$primary_color.'}#featured-wide-slider .slider-read-more-button a.slider-first-button,#featured-wide-slider .slider-read-more-button a.slider-second-button:hover{border:2px solid '.$primary_color.';background-color:'.$primary_color.'}a.slide-next,a.slide-prev{border:2px solid '.$primary_color.'}.breadcrumb a,.tg-one-fourth .widget-title a:hover,.tg-one-half .widget-title a:hover,.tg-one-third .widget-title a:hover{color:'.$primary_color.'}.pagination a span:hover{border-color:'.$primary_color.'}.header-widgets-wrapper,.widget-title span{border-bottom:2px solid '.$primary_color.'}@media screen and (max-width: 767px){.better-responsive-menu .menu li .sub-toggle, .better-responsive-menu .menu li ul li .sub-toggle {background-color:'.$primary_color.'}.better-responsive-menu .menu li .sub-toggle:hover { background-color:'.$primary_dark.'}}';
 	}
 
 	if( !empty( $explore_internal_css ) ) {

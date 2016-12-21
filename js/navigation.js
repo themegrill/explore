@@ -6,11 +6,11 @@
 ( function() {
 	var container, button, menu;
 
+	brm = document.getElementsByClassName( 'better-responsive-menu' )[0];
 	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
+	if ( ! container || brm ) {
 		return;
 	}
-
 	button = container.getElementsByClassName( 'menu-toggle' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
