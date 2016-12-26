@@ -421,28 +421,28 @@ function explore_customize_register( $wp_customize ) {
       )
    ));
 
-if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
-   // Custom CSS setting
-   $wp_customize->add_section('explore_custom_css_section', array(
-      'priority' => 9,
-      'title' => __('Custom CSS', 'explore'),
-      'panel' => 'explore_design_options'
-   ));
+	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
+	   // Custom CSS setting
+	   $wp_customize->add_section('explore_custom_css_section', array(
+	      'priority' => 9,
+	      'title' => __('Custom CSS', 'explore'),
+	      'panel' => 'explore_design_options'
+	   ));
 
-   $wp_customize->add_setting('explore_custom_css', array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'wp_filter_nohtml_kses',
-      'sanitize_js_callback' => 'wp_filter_nohtml_kses'
-   ));
+	   $wp_customize->add_setting('explore_custom_css', array(
+	      'default' => '',
+	      'capability' => 'edit_theme_options',
+	      'sanitize_callback' => 'wp_filter_nohtml_kses',
+	      'sanitize_js_callback' => 'wp_filter_nohtml_kses'
+	   ));
 
-   $wp_customize->add_control('explore_custom_css', array(
-      'type' => 'textarea',
-      'label' => __('Write your custom CSS code here and design live.', 'explore'),
-      'section' => 'explore_custom_css_section',
-      'settings' => 'explore_custom_css'
-   ));
-}
+	   $wp_customize->add_control('explore_custom_css', array(
+	      'type' => 'textarea',
+	      'label' => __('Write your custom CSS code here and design live.', 'explore'),
+	      'section' => 'explore_custom_css_section',
+	      'settings' => 'explore_custom_css'
+	   ));
+	}
    // End of the Design Options
 
    // Start of the Additional Options
