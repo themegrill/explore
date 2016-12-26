@@ -61,11 +61,15 @@ function explore_setup() {
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
 	add_theme_support( 'post-thumbnails' );
 
- // Adds the support for the Custom Logo introduced in WordPress 4.5
-  add_theme_support( 'custom-logo', array(
-     'flex-width' => true,
-     'flex-height' => true,
-   ));
+	// Added WooCommerce support.
+   	add_theme_support( 'woocommerce' );
+
+	// Adds the support for the Custom Logo introduced in WordPress 4.5
+	add_theme_support( 'custom-logo', array(
+		'flex-width' => true,
+		'flex-height' => true,
+	));
+
 
 	// Registering navigation menus.
    register_nav_menus( array(
