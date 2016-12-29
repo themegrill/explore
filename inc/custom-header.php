@@ -23,8 +23,9 @@ function explore_custom_header_setup() {
 		'default-text-color'     => '222222',
 		'width'                  => 1400,
 		'height'                 => 400,
-		'flex-width'				 => true,
+		'flex-width'			 => true,
 		'flex-height'            => true,
+		'video'                	 => true,
 		'wp-head-callback'       => 'explore_header_style',
 		'admin-head-callback'    => 'explore_admin_header_style',
 		'admin-preview-callback' => 'explore_admin_header_image',
@@ -114,11 +115,15 @@ function explore_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>">
-		<?php endif; ?>
+		<?php if ( function_exists('the_custom_header_markup') ) {
+			the_custom_header_markup();
+		} else { ?>
+			<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+			<?php if ( get_header_image() ) : ?>
+			<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>">
+			<?php endif; ?>
+		<?php } ?>
 	</div>
 <?php
 }
