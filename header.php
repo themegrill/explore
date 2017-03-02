@@ -53,7 +53,7 @@ wp_head();
 							<?php if ( get_theme_mod('explore_header_logo_image', '') != '') { ?>
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'explore_header_logo_image', '' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
 								<?php } ?>
- 
+
  							<?php if (function_exists('the_custom_logo') && has_custom_logo( $blog_id = 0 )) {
  								explore_the_custom_logo();
  							} ?>
