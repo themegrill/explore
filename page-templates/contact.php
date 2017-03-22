@@ -8,9 +8,8 @@
  * @subpackage Explore
  * @since Explore 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
    <div class="inner-wrap">
 

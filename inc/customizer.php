@@ -18,15 +18,15 @@ function explore_customize_register( $wp_customize ) {
          //Add Theme instruction, Support Forum, Demo Link, Rating Link
          $important_links = array(
             'support' => array(
-               'link' => esc_url('http://themegrill.com/support-forum/'),
+               'link' => esc_url('https://themegrill.com/support-forum/'),
                'text' => __('Free Support', 'explore'),
             ),
             'documentation' => array(
-               'link' => esc_url('http://themegrill.com/theme-instruction/explore/'),
+               'link' => esc_url('https://themegrill.com/theme-instruction/explore/'),
                'text' => __('Documentation', 'explore'),
             ),
             'demo' => array(
-               'link' => esc_url('http://demo.themegrill.com/explore/'),
+               'link' => esc_url('https://demo.themegrill.com/explore/'),
                'text' => __('View Demo', 'explore'),
             ),
             'rating' => array(

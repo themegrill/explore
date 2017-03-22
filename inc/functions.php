@@ -448,7 +448,7 @@ function explore_footer_copyright() {
 
 	$wp_link = '<a href="'.esc_url( 'http://wordpress.org' ).'" target="_blank" title="' . esc_attr__( 'WordPress', 'explore' ) . '"><span>' . __( 'WordPress', 'explore' ) . '</span></a>';
 
-	$tg_link =  '<a href="'.esc_url( 'http://themegrill.com/themes/explore' ).'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'explore' ).'" rel="designer"><span>'.__( 'ThemeGrill', 'explore') .'</span></a>';
+	$tg_link =  '<a href="'.esc_url( 'https://themegrill.com/themes/explore' ).'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'explore' ).'" rel="designer"><span>'.__( 'ThemeGrill', 'explore') .'</span></a>';
 
 	$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'explore' ), date( 'Y' ), $site_link ).'<br>'.sprintf( __( 'Powered by %s.', 'explore' ), $wp_link ).' '.sprintf( __( 'Theme: %1$s by %2$s.', 'explore' ), 'Explore', $tg_link );
 

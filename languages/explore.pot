@@ -859,7 +859,7 @@ msgid "Explore"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://themegrill.com/themes/explore"
+msgid "https://themegrill.com/themes/explore"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -869,7 +869,7 @@ msgid ""
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://themegrill.com"
+msgid "https://themegrill.com"
 msgstr ""
 
 #. Template Name of the plugin/theme

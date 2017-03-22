@@ -6,9 +6,8 @@
  * @subpackage Explore
  * @since Explore 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php do_action( 'explore_before_body_content' ); ?>
 

@@ -127,9 +127,9 @@ class Explore_Admin {
 		</div>
 
 		<p class="explore-actions">
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/explore/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'explore' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/explore/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'explore' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'explore_pro_theme_url', 'http://demo.themegrill.com/explore/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'explore' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'explore_pro_theme_url', 'https://demo.themegrill.com/explore/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'explore' ); ?></a>
 
 			<a href="<?php echo esc_url( apply_filters( 'explore_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/explore?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'explore' ); ?></a>
 		</p>
@@ -184,13 +184,13 @@ class Explore_Admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'explore' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'explore' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/explore/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'explore' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/theme-instruction/explore/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'explore' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got theme support question?', 'explore' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'explore' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'explore' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'explore' ); ?></a></p>
 					</div>
 
 					<div class="col">
