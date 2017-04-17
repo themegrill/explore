@@ -54,6 +54,7 @@ and we will include it within the theme from next version update.
 
 = Version TBD =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
+* Tweaks - Add theme support for WooCommerce 3.0's new gallery feature
 
 = Version 1.0.6 - 2016-12-26 =
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5

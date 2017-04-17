@@ -63,6 +63,9 @@ function explore_setup() {
 
 	// Added WooCommerce support.
    	add_theme_support( 'woocommerce' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
 
 	// Adds the support for the Custom Logo introduced in WordPress 4.5
 	add_theme_support( 'custom-logo', array(
