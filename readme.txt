@@ -52,7 +52,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-= Version TBD =
+= Version 1.0.7 - 2017-05-02 =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
 * Tweaks - Add theme support for WooCommerce 3.0's new gallery feature
 
