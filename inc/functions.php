@@ -86,7 +86,7 @@ function explore_scripts_styles_method() {
 	 * Enqueue Slider setup js file.
 	 */
 	if ( is_front_page() && get_theme_mod( 'explore_activate_slider', '0' ) == '1' ) {
-		wp_enqueue_script( 'explore-bxslider', EXPLORE_JS_URL . '/jquery.bxslider/jquery.bxslider' . $suffix . '.js', array( 'jquery' ), '4.1.2', true );
+		wp_enqueue_script( 'explore-bxslider', EXPLORE_JS_URL . '/jquery.bxslider/jquery.bxslider' . $suffix . '.js', array( 'jquery' ), '4.2.12', true );
 	}
 
    // enqueueing stickyjs for sticky primary menu
@@ -95,7 +95,7 @@ function explore_scripts_styles_method() {
    }
 
    // enqueueing fitvids for responsive videos
-   wp_enqueue_script( 'explore-fitvids', EXPLORE_JS_URL . '/fitvids/jquery.fitvids' . $suffix . '.js', array( 'jquery' ), false, true );
+   wp_enqueue_script( 'explore-fitvids', EXPLORE_JS_URL . '/fitvids/jquery.fitvids' . $suffix . '.js', array( 'jquery' ), '1.2.0', true );
 
    // enqueueing navigation file
 	wp_enqueue_script( 'explore-navigation', EXPLORE_JS_URL . '/navigation' . $suffix . '.js', array( 'jquery' ), false, true );
@@ -103,7 +103,7 @@ function explore_scripts_styles_method() {
 	wp_enqueue_script( 'explore-custom', EXPLORE_JS_URL. '/explore-custom' . $suffix . '.js', array( 'jquery' ) );
 
    // enqueueing fontawesome icons
-   wp_enqueue_style( 'explore-fontawesome', get_template_directory_uri().'/font-awesome/css/font-awesome' . $suffix . '.css', array(), '4.4.0' );
+   wp_enqueue_style( 'explore-fontawesome', get_template_directory_uri().'/font-awesome/css/font-awesome' . $suffix . '.css', array(), '4.7.0' );
 
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.3', false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );

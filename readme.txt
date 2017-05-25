@@ -51,6 +51,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Updated font awesome to `v4.7.0`
+* Tweaks - Updated fitvids to `v1.2.0`
+* Tweaks - Updated bxslider to `v4.2.12`
 
 = Version 1.0.7 - 2017-05-02 =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
