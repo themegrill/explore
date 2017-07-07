@@ -131,7 +131,7 @@ class Explore_Admin {
 
 			<a href="<?php echo esc_url( apply_filters( 'explore_pro_theme_url', 'https://demo.themegrill.com/explore/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'explore' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'explore_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/explore?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'explore' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'explore_pro_theme_url', 'https://wordpress.org/support/theme/explore/reviews/?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'explore' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
