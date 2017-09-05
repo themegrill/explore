@@ -54,6 +54,7 @@ and we will include it within the theme from next version update.
 
 = Version TBD =
 * Tweaks - Added support for themegrill demo importer plugin.
+* Tweaks - Introduce selective refresh for site title and description
 
 = Version 1.0.7 - 2017-05-02 =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
