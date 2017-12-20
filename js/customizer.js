@@ -20,4 +20,17 @@
 			$( '#site-description' ).text( to );
 		} );
 	} );
+
+	/*
+	 * Shows a live preview of changing the site title color.
+	 */
+	wp.customize( 'header_textcolor', function( value ) {
+
+		value.bind( function( to ) {
+
+			jQuery( '#site-title a' ).css( 'color', to );
+
+		} ); // value.bind
+
+	} ); // wp.customize
 })( jQuery );
