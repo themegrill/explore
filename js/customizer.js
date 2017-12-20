@@ -25,12 +25,23 @@
 	 * Shows a live preview of changing the site title color.
 	 */
 	wp.customize( 'header_textcolor', function( value ) {
-
 		value.bind( function( to ) {
 
 			jQuery( '#site-title a' ).css( 'color', to );
 
 		} ); // value.bind
-
 	} ); // wp.customize
+
+	// Site layout
+	wp.customize( 'explore_site_layout', function ( value ) {
+		value.bind( function ( layout ) {
+			var layout_options = layout;
+			if ( layout_options == 'wide_layout' ) {
+				$( 'body' ).addClass( 'wide' );
+			} else if( layout == 'boxed_layout' ) {
+				$( 'body' ).removeClass( 'wide' );
+				$( 'body' ).addClass( 'boxed' );
+			}
+		});
+	});
 })( jQuery );

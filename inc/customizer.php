@@ -212,8 +212,9 @@ function explore_customize_register( $wp_customize ) {
    ));
 
    $wp_customize->add_setting('explore_site_layout', array(
-      'default' => 'wide_layout',
-      'capability' => 'edit_theme_options',
+      'default'           => 'wide_layout',
+      'capability'        => 'edit_theme_options',
+      'transport'         => 'postMessage',
       'sanitize_callback' => 'explore_radio_select_sanitize'
    ));
 
