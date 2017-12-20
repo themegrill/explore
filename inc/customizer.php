@@ -693,6 +693,16 @@ function explore_customize_register( $wp_customize ) {
 add_action('customize_register', 'explore_customize_register');
 
 /**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since explore 1.0.8
+ */
+function explore_customize_preview_js() {
+   wp_enqueue_script( 'explore-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_preview_init', 'explore_customize_preview_js' );
+
+/**
  * Render the site title for the selective refresh partial.
  *
  * @return void
