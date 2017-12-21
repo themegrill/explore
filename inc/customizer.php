@@ -397,20 +397,21 @@ function explore_customize_register( $wp_customize ) {
    // Site primary color option
    $wp_customize->add_section('explore_primary_color_section', array(
       'priority' => 7,
-      'title' => __('Primary color option', 'explore'),
-      'panel' => 'explore_design_options',
+      'title'    => __('Primary color option', 'explore'),
+      'panel'    => 'explore_design_options',
    ));
 
    $wp_customize->add_setting('explore_primary_color', array(
-      'default' => '#4cb0c6',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'explore_color_option_hex_sanitize',
+      'default'              => '#4cb0c6',
+      'capability'           => 'edit_theme_options',
+      'transport'            => 'postMessage',
+      'sanitize_callback'    => 'explore_color_option_hex_sanitize',
       'sanitize_js_callback' => 'explore_color_escaping_option_sanitize'
    ));
 
    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'explore_primary_color', array(
-      'label' => __('This will reflect in links, buttons and many others. Choose a color to match your site.', 'explore'),
-      'section' => 'explore_primary_color_section',
+      'label'    => __('This will reflect in links, buttons and many others. Choose a color to match your site.', 'explore'),
+      'section'  => 'explore_primary_color_section',
       'settings' => 'explore_primary_color'
    )));
 
