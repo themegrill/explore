@@ -8,6 +8,9 @@
  */
 
 function explore_customize_register( $wp_customize ) {
+   // Transport postMessage variable set
+   $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
    $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -564,17 +567,26 @@ function explore_customize_register( $wp_customize ) {
    ));
 
    $wp_customize->add_setting('explore_activate_slider', array(
-      'default' => 0,
-      'capability' => 'edit_theme_options',
+      'default'           => 0,
+      'capability'        => 'edit_theme_options',
+      'transport'         => $customizer_selective_refresh,
       'sanitize_callback' => 'explore_checkbox_sanitize'
    ));
 
    $wp_customize->add_control('explore_activate_slider', array(
-      'type' => 'checkbox',
-      'label' => __('Check to activate slider.', 'explore'),
-      'section' => 'explore_slider_activate_section',
+      'type'     => 'checkbox',
+      'label'    => __('Check to activate slider.', 'explore'),
+      'section'  => 'explore_slider_activate_section',
       'settings' => 'explore_activate_slider'
    ));
+
+   // Selective refresh for slider activation
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'explore_activate_slider', array(
+         'selector'        => '.bx-wrapper',
+         'render_callback' => '',
+      ) );
+   }
 
    // slider pages select
    for( $i = 1; $i <= 5; $i++ ) {
