@@ -52,8 +52,8 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-= Version TBD =
-* Tweaks - Added support for themegrill demo importer plugin.
+= Version 1.0.8 - 2018-03-22 =
+* Tweaks - Added support for ThemeGrill Demo Importer plugin.
 * Tweaks - Introduce selective refresh for site title and description
 
 = Version 1.0.7 - 2017-05-02 =
