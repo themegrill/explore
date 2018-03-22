@@ -8,8 +8,13 @@
  */
 
 function explore_customize_register( $wp_customize ) {
+   // Transport postMessage variable set
+   $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+   $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
 
    if ( isset( $wp_customize->selective_refresh ) ) {
       $wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -210,8 +215,9 @@ function explore_customize_register( $wp_customize ) {
    ));
 
    $wp_customize->add_setting('explore_site_layout', array(
-      'default' => 'wide_layout',
-      'capability' => 'edit_theme_options',
+      'default'           => 'wide_layout',
+      'capability'        => 'edit_theme_options',
+      'transport'         => 'postMessage',
       'sanitize_callback' => 'explore_radio_select_sanitize'
    ));
 
@@ -394,20 +400,21 @@ function explore_customize_register( $wp_customize ) {
    // Site primary color option
    $wp_customize->add_section('explore_primary_color_section', array(
       'priority' => 7,
-      'title' => __('Primary color option', 'explore'),
-      'panel' => 'explore_design_options',
+      'title'    => __('Primary color option', 'explore'),
+      'panel'    => 'explore_design_options',
    ));
 
    $wp_customize->add_setting('explore_primary_color', array(
-      'default' => '#4cb0c6',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'explore_color_option_hex_sanitize',
+      'default'              => '#4cb0c6',
+      'capability'           => 'edit_theme_options',
+      'transport'            => 'postMessage',
+      'sanitize_callback'    => 'explore_color_option_hex_sanitize',
       'sanitize_js_callback' => 'explore_color_escaping_option_sanitize'
    ));
 
    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'explore_primary_color', array(
-      'label' => __('This will reflect in links, buttons and many others. Choose a color to match your site.', 'explore'),
-      'section' => 'explore_primary_color_section',
+      'label'    => __('This will reflect in links, buttons and many others. Choose a color to match your site.', 'explore'),
+      'section'  => 'explore_primary_color_section',
       'settings' => 'explore_primary_color'
    )));
 
@@ -560,17 +567,26 @@ function explore_customize_register( $wp_customize ) {
    ));
 
    $wp_customize->add_setting('explore_activate_slider', array(
-      'default' => 0,
-      'capability' => 'edit_theme_options',
+      'default'           => 0,
+      'capability'        => 'edit_theme_options',
+      'transport'         => $customizer_selective_refresh,
       'sanitize_callback' => 'explore_checkbox_sanitize'
    ));
 
    $wp_customize->add_control('explore_activate_slider', array(
-      'type' => 'checkbox',
-      'label' => __('Check to activate slider.', 'explore'),
-      'section' => 'explore_slider_activate_section',
+      'type'     => 'checkbox',
+      'label'    => __('Check to activate slider.', 'explore'),
+      'section'  => 'explore_slider_activate_section',
       'settings' => 'explore_activate_slider'
    ));
+
+   // Selective refresh for slider activation
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'explore_activate_slider', array(
+         'selector'        => '.bx-wrapper',
+         'render_callback' => '',
+      ) );
+   }
 
    // slider pages select
    for( $i = 1; $i <= 5; $i++ ) {
@@ -691,6 +707,16 @@ function explore_customize_register( $wp_customize ) {
 }
 
 add_action('customize_register', 'explore_customize_register');
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since explore 1.0.8
+ */
+function explore_customize_preview_js() {
+   wp_enqueue_script( 'explore-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_preview_init', 'explore_customize_preview_js' );
 
 /**
  * Render the site title for the selective refresh partial.
