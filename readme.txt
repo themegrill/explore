@@ -52,7 +52,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-== TBD ==
+= Version 1.0.9 - 2018-09-06 =
 * Update - About page theme links.
 
 = Version 1.0.8 - 2018-03-22 =
