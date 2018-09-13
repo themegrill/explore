@@ -129,7 +129,7 @@ function explore_customize_register( $wp_customize ) {
    $wp_customize->add_control('explore_show_header_logo_text', array(
       'type' => 'radio',
       'label' => __('Choose the option that you want.', 'explore'),
-      'section' => 'explore_header_logo',
+      'section' => 'title_tagline',
       'choices' => array(
          'logo_only' => __( 'Header Logo Only', 'explore' ),
          'text_only' => __( 'Header Text Only', 'explore' ),
