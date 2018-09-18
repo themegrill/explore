@@ -98,27 +98,6 @@ function explore_customize_register( $wp_customize ) {
       'title' => __('Header Options', 'explore')
    ));
 
-   // Header Logo upload option
-   $wp_customize->add_section('explore_header_logo', array(
-      'priority' => 1,
-      'title' => __('Header Logo', 'explore'),
-      'panel' => 'explore_header_options'
-   ));
-
-	if ( ! function_exists('the_custom_logo') ) {
-		$wp_customize->add_setting('explore_header_logo_image', array(
-			'default' => '',
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw'
-		));
-
-		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'explore_header_logo_image', array(
-			'label' => __('Upload logo for your header. Recommended image size is 100 X 100 pixels.', 'explore'),
-			'section' => 'explore_header_logo',
-			'setting' => 'explore_header_logo_image'
-		)));
-	}
-
    // Header logo and text display type option
    $wp_customize->add_setting('explore_show_header_logo_text', array(
       'default' => 'text_only',
