@@ -73,6 +73,9 @@ function explore_setup() {
 		'flex-height' => true,
 	));
 
+	// Gutenberg layout support.
+	add_theme_support( 'align-wide' );
+
 
 	// Registering navigation menus.
    register_nav_menus( array(
