@@ -2142,6 +2142,10 @@ a#scroll-up:hover {
 	margin-bottom: 30px;
 }
 
+ul.wp-block-gallery {
+	padding: 0;
+}
+
 .entry-content li > ul,
 .entry-content li > ol {
 	margin-bottom: 0;
