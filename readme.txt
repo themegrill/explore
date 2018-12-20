@@ -52,9 +52,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-= TBD =
-* Remove - Backward compatible for header logo
+= Version 1.1.0 - 2018-12-20 =
 * Added - Gutenberg compatibility
+* Remove - Backward compatible for header logo
 
 = Version 1.0.9 - 2018-09-06 =
 * Update - About page theme links.
