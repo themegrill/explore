@@ -738,3 +738,18 @@ function explore_custom_css_migrate() {
 }
 
 add_action( 'after_setup_theme', 'explore_custom_css_migrate' );
+
+if ( ! function_exists( 'explore_pingback_header' ) ) :
+
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 */
+	function explore_pingback_header() {
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
+	}
+
+endif;
+
+add_action( 'wp_head', 'explore_pingback_header' );
