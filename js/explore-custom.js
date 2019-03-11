@@ -7,6 +7,11 @@ jQuery(document).ready(function(){
    // For Search Icon Toggle effect added at the top
    jQuery('.search-top').click(function(){
       jQuery('#masthead .search-form-top').toggle();
+
+	   // focus after some time to fix conflict with toggleClass
+	   setTimeout( function () {
+		   jQuery( '#masthead .search-form input' ).focus();
+	   }, 200 );
    });
 
    jQuery('.header-widget-controller').click(function(){
