@@ -4,7 +4,10 @@
 
 jQuery(document).ready(function(){
 
-   // For Search Icon Toggle effect added at the top
+	var hideSearchForm = function() {
+		jQuery( '#masthead .search-form-top' ).hide();
+	};
+	// For Search Icon Toggle effect added at the top
    jQuery('.search-top').click(function(){
       jQuery('#masthead .search-form-top').toggle();
 
@@ -12,6 +15,20 @@ jQuery(document).ready(function(){
 	   setTimeout( function () {
 		   jQuery( '#masthead .search-form input' ).focus();
 	   }, 200 );
+
+	   // For esc key press.
+	   jQuery( document ).on( 'keyup', function ( e ) {
+
+		   // on esc key press.
+		   if ( 27 === e.keyCode ) {
+			   // if search box is opened
+			   if ( jQuery( '#masthead' ).has( '.search-form' ) ) {
+				   hideSearchForm();
+			   }
+
+		   }
+	   } );
+
    });
 
    jQuery('.header-widget-controller').click(function(){
