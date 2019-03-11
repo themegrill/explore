@@ -29,6 +29,14 @@ jQuery(document).ready(function(){
 		   }
 	   } );
 
+	   jQuery( document ).on( 'click', function( e ) {
+		   var container = jQuery( '.search-form-top, .search-top, .search-form input' );
+		   if ( ! container.is( e.target ) ) {
+			   hideSearchForm();
+		   }
+
+	   } );
+
    });
 
    jQuery('.header-widget-controller').click(function(){
