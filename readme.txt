@@ -51,7 +51,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.1.1 - 2019-03-26 =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 * Update - BxSlider to 4.2.15
 
