@@ -31,6 +31,13 @@ wp_head();
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+}
+?>
+
 <?php	do_action( 'explore_before' ); ?>
 <div id="page" class="hfeed site">
 	<?php do_action( 'explore_before_header' ); ?>
