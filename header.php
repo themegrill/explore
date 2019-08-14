@@ -40,6 +40,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <?php	do_action( 'explore_before' ); ?>
 <div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'explore' ); ?></a>
+
 	<?php do_action( 'explore_before_header' ); ?>
 	<header id="masthead" class="site-header clearfix">
 
