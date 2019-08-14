@@ -101,6 +101,10 @@ function explore_scripts_styles_method() {
 
 	// enqueueing navigation file
 	wp_enqueue_script( 'explore-navigation', EXPLORE_JS_URL . '/navigation' . $suffix . '.js', array( 'jquery' ), false, true );
+
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'explore-skip-link-focus-fix', EXPLORE_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+
 	// enqueueing explore theme custom js file
 	wp_enqueue_script( 'explore-custom', EXPLORE_JS_URL . '/explore-custom' . $suffix . '.js', array( 'jquery' ) );
 
