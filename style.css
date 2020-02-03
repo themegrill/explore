@@ -317,7 +317,8 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea {
+textarea,
+input[type="url"] {
 	padding: 1%;
 	border: 1px solid #eaeaea;
 	line-height: 20px;
@@ -1687,6 +1688,14 @@ a.slide-next:hover {
 	padding: 0;
 }
 
+#respond form .comment-form-cookies-consent #wp-comment-cookies-consent {
+	margin-right: 5px;
+}
+
+#respond form .comment-form-cookies-consent label {
+	display: inline;
+}
+
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -1783,7 +1792,8 @@ a.slide-next:hover {
 }
 
 #respond form input[type="text"],
-#respond form textarea {
+#respond form textarea,
+#respond form input[type="email"], #respond form input[type="url"] {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	font-size: 15px;
