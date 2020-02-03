@@ -55,6 +55,7 @@ and we will include it within the theme from next version update.
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
 * Tweak - Modify menu CSS for keyboard accessibility.
+* Fix - Input type CSS for comments
 
 = Version 1.1.1 - 2019-03-26 =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
