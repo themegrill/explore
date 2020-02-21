@@ -156,6 +156,12 @@ define( 'EXPLORE_ADMIN_CSS_URL', EXPLORE_ADMIN_URL . '/css' );
 /** Load functions */
 require_once( EXPLORE_INCLUDES_DIR . '/custom-header.php' );
 require_once( EXPLORE_INCLUDES_DIR . '/functions.php' );
+/**
+ * Admin.
+ */
+if ( is_admin() ) {
+	require_once( EXPLORE_ADMIN_DIR . '/tdi-notice.php' );
+}
 require_once( EXPLORE_INCLUDES_DIR . '/customizer.php' );
 require_once( EXPLORE_INCLUDES_DIR . '/header-functions.php' );
 
