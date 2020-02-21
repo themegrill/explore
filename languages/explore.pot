@@ -1,14 +1,14 @@
-# Copyright (C) 2019 ThemeGrill
+# Copyright (C) 2020 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Explore 1.1.1\n"
+"Project-Id-Version: Explore 1.1.2\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2019-07-17 11:07:48+00:00\n"
+"POT-Creation-Date: 2020-02-21 05:22:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: content-page.php:39 inc/functions.php:628 inc/functions.php:664
+#: content-page.php:39 inc/functions.php:632 inc/functions.php:668
 msgid "Edit"
 msgstr ""
 
@@ -70,6 +70,10 @@ msgstr ""
 
 #: functions.php:84
 msgid "Footer Menu"
+msgstr ""
+
+#: header.php:43
+msgid "Skip to content"
 msgstr ""
 
 #: inc/admin/class-explore-admin.php:36 inc/admin/class-explore-admin.php:118
@@ -237,6 +241,34 @@ msgstr ""
 
 #: inc/admin/meta-boxes.php:53
 msgid "No Sidebar Content Centered"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:40
+#. Translators: 1: Notice text 2: Plugin Name 3. CTA
+msgid ""
+"%1$s: Please update \"%2$s\" plugin to latest version to make sure your "
+"site is all secure. We released a security patch in the latest version of "
+"this plugin. %3$s"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:41
+msgid "Action Required"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:42 inc/admin/tdi-notice.php:54
+msgid "ThemeGrill Demo Importer"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:47
+#. Translators: 1: CTA link 2: CTA text
+msgid "Update Now"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:53
+#. Translators: 1: Plugin name
+msgid ""
+"Also, if the purpose of importing the demo via \"%1$s\" plugin is "
+"fulfilled, you can simply delete this plugin now."
 msgstr ""
 
 #: inc/customizer.php:41
@@ -516,47 +548,47 @@ msgstr ""
 msgid "Explore"
 msgstr ""
 
-#: inc/functions.php:367
+#: inc/functions.php:371
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:377
+#: inc/functions.php:381
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:381
+#: inc/functions.php:385
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:407
+#: inc/functions.php:411
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:407
+#: inc/functions.php:411
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:422
+#: inc/functions.php:426
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:425
+#: inc/functions.php:429
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:427
+#: inc/functions.php:431
 msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
 msgstr ""
 
-#: inc/functions.php:433
+#: inc/functions.php:437
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:439
+#: inc/functions.php:443
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:463
+#: inc/functions.php:467
 msgid "WordPress"
 msgstr ""
 
@@ -564,49 +596,49 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:467
+#: inc/functions.php:471
 msgid "Copyright &copy; %1$s %2$s. All rights reserved."
 msgstr ""
 
-#: inc/functions.php:467
+#: inc/functions.php:471
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:467
+#: inc/functions.php:471
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:617
+#: inc/functions.php:621
 msgid ""
 "<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:625
+#: inc/functions.php:629
 msgid "0 <i class=\"fa fa-comment\"></i>"
 msgstr ""
 
-#: inc/functions.php:625
+#: inc/functions.php:629
 msgid "1 <i class=\"fa fa-comment\"></i>"
 msgstr ""
 
-#: inc/functions.php:625
+#: inc/functions.php:629
 msgid "% <i class=\"fa fa-comments\"></i>"
 msgstr ""
 
-#: inc/functions.php:662
+#: inc/functions.php:666
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:662
+#: inc/functions.php:666
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:662
+#: inc/functions.php:666
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:662
+#: inc/functions.php:666
 msgid "Comments Off"
 msgstr ""
 
@@ -1260,12 +1292,12 @@ msgctxt "Add new subset (cyrillic)"
 msgid "no-subset"
 msgstr ""
 
-#: inc/functions.php:371 navigation.php:42
+#: inc/functions.php:375 navigation.php:42
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:372 navigation.php:43
+#: inc/functions.php:376 navigation.php:43
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""
