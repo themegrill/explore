@@ -161,6 +161,7 @@ require_once( EXPLORE_INCLUDES_DIR . '/functions.php' );
  */
 if ( is_admin() ) {
 	require_once( EXPLORE_ADMIN_DIR . '/tdi-notice.php' );
+  require ( EXPLORE_ADMIN_DIR . '/class-explore-theme-review-notice.php' );
 }
 require_once( EXPLORE_INCLUDES_DIR . '/customizer.php' );
 require_once( EXPLORE_INCLUDES_DIR . '/header-functions.php' );
