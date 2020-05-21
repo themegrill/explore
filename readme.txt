@@ -51,6 +51,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Add and improve theme-related notices.
+
 = Version 1.1.2 - 2020-02-21 =
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
