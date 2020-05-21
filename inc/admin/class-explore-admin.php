@@ -30,9 +30,9 @@ if ( ! class_exists( 'Explore_Admin' ) ) :
 		 * Localize array for import button AJAX request.
 		 */
 		public function enqueue_scripts() {
-			wp_enqueue_style( 'explore-admin-style', get_template_directory_uri() . '/inc/admin/css/admin.css', array(), MASONIC_THEME_VERSION );
+			wp_enqueue_style( 'explore-admin-style', get_template_directory_uri() . '/inc/admin/css/admin.css', array(), EXPLORE_THEME_VERSION );
 
-			wp_enqueue_script( 'explore-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), MASONIC_THEME_VERSION, true );
+			wp_enqueue_script( 'explore-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), EXPLORE_THEME_VERSION, true );
 
 			$welcome_data = array(
 				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&explore-hide-notice=welcome' ) ),
