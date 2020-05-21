@@ -48,9 +48,8 @@ if ( ! class_exists( 'Explore_Admin' ) ) :
 		 * Enqueue styles.
 		 */
 		public function enqueue_styles() {
-			global $explore_version;
 
-			wp_enqueue_style( 'explore-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $explore_version );
+			wp_enqueue_style( 'explore-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), EXPLORE_THEME_VERSION );
 		}
 
 
@@ -60,11 +59,11 @@ if ( ! class_exists( 'Explore_Admin' ) ) :
 		 * @access private
 		 */
 		private function intro() {
-			global $explore_version;
+
 			$theme = wp_get_theme( get_template() );
 
 			// Drop minor version if 0
-			$major_version = substr( $explore_version, 0, 3 );
+			$major_version = substr( EXPLORE_THEME_VERSION, 0, 3 );
 			?>
 			<div class="explore-theme-info">
 				<h1>
@@ -91,7 +90,7 @@ if ( ! class_exists( 'Explore_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( empty( $_GET['tab'] ) && $_GET['page'] == 'explore-welcome' ) {
 					echo 'nav-tab-active';
@@ -100,7 +99,7 @@ if ( ! class_exists( 'Explore_Admin' ) ) :
 				" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'explore-welcome' ), 'themes.php' ) ) ); ?>">
 					<?php echo $theme->display( 'Name' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
@@ -123,7 +122,7 @@ if ( ! class_exists( 'Explore_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Supported Plugins', 'explore' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';

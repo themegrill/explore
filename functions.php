@@ -174,8 +174,9 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Explore version to a variable.
  */
-$theme            = wp_get_theme( 'explore' );
-$explore_version = $theme['Version'];
+$explore_theme = wp_get_theme( 'explore' );
+
+define( 'EXPLORE_THEME_VERSION', $explore_theme->get( 'Version' ) );
 
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
