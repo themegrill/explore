@@ -62,7 +62,7 @@ function explore_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Added WooCommerce support.
-   	add_theme_support( 'woocommerce' );
+    add_theme_support( 'woocommerce' );
     add_theme_support( 'wc-product-gallery-zoom' );
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
@@ -73,8 +73,14 @@ function explore_setup() {
 		'flex-height' => true,
 	));
 
-	// Gutenberg layout support.
-	add_theme_support( 'align-wide' );
+	// Gutenberg wide layout support.
+   add_theme_support( 'align-wide' );
+
+   // Gutenberg block layout support.
+   add_theme_support( 'wp-block-styles' );
+
+   // Gutenberg editor support.
+   add_theme_support( 'responsive-embeds' );
 
 
 	// Registering navigation menus.
@@ -118,6 +124,15 @@ function explore_setup() {
 }
 endif;
 
+/**
+ * Enqueue Google fonts and editor styles.
+ */
+function explore_block_editor_styles() {
+	wp_enqueue_style( 'explore-editor-googlefonts', '//fonts.googleapis.com/css2?family=PT Sans' );
+	wp_enqueue_style( 'explore-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'explore_block_editor_styles', 1, 1 );
 /**
  * Define Directory Location Constants
  */
