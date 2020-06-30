@@ -128,7 +128,7 @@ endif;
  * Enqueue Google fonts and editor styles.
  */
 function explore_block_editor_styles() {
-	wp_enqueue_style( 'explore-editor-googlefonts', '//fonts.googleapis.com/css2?family=PT Sans' );
+	wp_enqueue_style( 'explore-editor-googlefonts', '//fonts.googleapis.com/css2?family=PT+Sans' );
 	wp_enqueue_style( 'explore-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
 }
 
