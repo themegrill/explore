@@ -2122,6 +2122,7 @@ a#scroll-up:hover {
 	padding-right: 0;
 	float: none;
 	max-width: unset;
+	width: unset;
 }
 
 .no_sidebar_full_width .alignwide,
@@ -2131,12 +2132,14 @@ a#scroll-up:hover {
 	max-width: unset;
 	padding-right: 0 !important;
 	float: none !important;
+	width: unset;
 }
 
 .no_sidebar_full_width .alignfull img,
 .no_sidebar_content_centered .alignfull img {
 	max-width: unset;
 }
+
 
 
 /* =BOTH SIDEBAR LAYOUT
