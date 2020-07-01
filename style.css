@@ -279,7 +279,8 @@ li > ol {
 
 /* =BLOCKQUOTE
 ----------------------------------------------- */
-blockquote {
+blockquote,
+.wp-block-quote{
 	font-style: italic;
 	font-weight: normal;
 	padding: 20px;
@@ -288,11 +289,16 @@ blockquote {
 	margin-bottom: 20px;
 }
 
-blockquote em, blockquote i, blockquote cite {
+.wp-block-quote em,
+.wp-block-quote i,
+.wp-block-quote cite {
 	font-style: normal;
 }
 
-blockquote cite {
+blockquote cite,
+.wp-block-quote cite,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right cite {
 	color: #666666;
 	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -1541,6 +1547,7 @@ a.slide-next:hover {
 
 .gallery-icon img {
 	margin: 0 auto;
+	max-width: 100%;
 }
 
 .gallery .gallery-caption {
@@ -2115,8 +2122,8 @@ a#scroll-up:hover {
 	overflow: hidden;
 }
 
-.no_sidebar_full_width .alignfull,
-.no_sidebar_content_centered .alignfull {
+.no_sidebar_full_width #primary .entry-content >.alignfull,
+.no_sidebar_content_centered #primary .entry-content > .alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	padding-right: 0;
@@ -2125,8 +2132,8 @@ a#scroll-up:hover {
 	width: unset;
 }
 
-.no_sidebar_full_width .alignwide,
-.no_sidebar_content_centered .alignwide {
+.no_sidebar_full_width #primary .entry-content >.alignwide,
+.no_sidebar_content_centered #primary .entry-content > .alignwide {
 	margin-left: -100px;
 	margin-right: -100px;
 	max-width: unset;
@@ -2135,9 +2142,11 @@ a#scroll-up:hover {
 	width: unset;
 }
 
-.no_sidebar_full_width .alignfull img,
-.no_sidebar_content_centered .alignfull img {
-	max-width: unset;
+.no_sidebar_full_width #primary .entry-content >.alignfull.wp-block-cover,.no_sidebar_full_width #primary .entry-content > .alignfull.wp-block-cover-image,
+.no_sidebar_content_centered #primary .entry-content >.alignfull.wp-block-cover,.no_sidebar_full_width #primary .entry-content > .alignfull.wp-block-cover-image,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {	
+max-width: unset;
 }
 
 
