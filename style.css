@@ -171,7 +171,8 @@ h6 {
 	font-size: 19px;
 }
 
-hr {
+hr,
+.wp-block-separator {
 	border-color: #eaeaea;
 	border-style: solid none none;
 	border-width: 1px 0 0;
@@ -714,7 +715,7 @@ body {
 	color: #ffffff;
 	background-color: #4cb0c6;
 }
-
+/
 /* =Header widget controller
 ----------------------------------------------- */
 .fa.header-widget-controller {
@@ -1555,6 +1556,16 @@ a.slide-next:hover {
 	line-height: 1.2;
 	padding-top: 5px;
 }
+
+/* Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright,
+.wp-block-social-links.aligncenter {
+	display: flex;
+}
+
 
 /* =COMMENTS
 ----------------------------------------------- */
@@ -2703,7 +2714,7 @@ iframe#wp-custom-header-video {
 	#primary, #secondary {
 		float: none;
 		width: 100%;
-		margin: 0;
+		margin: -15px;
 	}
 
 	#featured-slider .entry-container {
