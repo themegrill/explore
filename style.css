@@ -2751,13 +2751,15 @@ iframe#wp-custom-header-video {
 			margin-left: -15px;
 			margin-right: -15px;
 		}
+.no-sidebar #primary .entry-content > .alignfull {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
 	#primary, #secondary {
 		float: none;
 		width: 100%;
 		margin: -15px;
 	}
-	
-
 	#featured-slider .entry-container {
 		max-width: 70%;
 	}
