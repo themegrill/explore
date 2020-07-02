@@ -367,10 +367,6 @@
 	margin-bottom: 1.625em;
 }
 
-.editor-styles-wrapper p img {
-
-}
-
 .editor-styles-wrapper img#wpstats {
 	display: none;
 }
@@ -415,9 +411,6 @@
 
 .editor-styles-wrapper .wp-caption .wp-caption-text {
 	margin: 0.8075rem 0;
-}
-
-.editor-styles-wrapper .gallery-caption {
 }
 
 /* =WORDPRESS GALLERY SUPPORT
