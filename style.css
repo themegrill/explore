@@ -715,7 +715,7 @@ body {
 	color: #ffffff;
 	background-color: #4cb0c6;
 }
-/
+
 /* =Header widget controller
 ----------------------------------------------- */
 .fa.header-widget-controller {
@@ -2156,7 +2156,7 @@ a#scroll-up:hover {
 .no_sidebar_full_width #primary .entry-content >.alignfull.wp-block-cover,.no_sidebar_full_width #primary .entry-content > .alignfull.wp-block-cover-image,
 .no_sidebar_content_centered #primary .entry-content >.alignfull.wp-block-cover,.no_sidebar_full_width #primary .entry-content > .alignfull.wp-block-cover-image,
 .no-sidebar #primary .entry-content > .alignfull.wp-block-cover,
-.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {	
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {
 max-width: unset;
 }
 
