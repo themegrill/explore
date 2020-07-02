@@ -342,12 +342,6 @@
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
 }
 
-.editor-styles-wrapper img[class*="align"],
-.editor-styles-wrapper img[class*="wp-image-"],
-.editor-styles-wrapper img[class*="attachment-"] {
-
-}
-
 .editor-styles-wrapper img.size-full,
 .editor-styles-wrapper img.size-large {
 	max-width: 100%;
