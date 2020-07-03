@@ -342,12 +342,6 @@
 	max-width: 100%; /* Fluid images for posts, comments, and widgets */
 }
 
-.editor-styles-wrapper img[class*="align"],
-.editor-styles-wrapper img[class*="wp-image-"],
-.editor-styles-wrapper img[class*="attachment-"] {
-
-}
-
 .editor-styles-wrapper img.size-full,
 .editor-styles-wrapper img.size-large {
 	max-width: 100%;
@@ -365,10 +359,6 @@
 .editor-styles-wrapper img.alignright,
 .editor-styles-wrapper img.aligncenter {
 	margin-bottom: 1.625em;
-}
-
-.editor-styles-wrapper p img {
-
 }
 
 .editor-styles-wrapper img#wpstats {
@@ -415,9 +405,6 @@
 
 .editor-styles-wrapper .wp-caption .wp-caption-text {
 	margin: 0.8075rem 0;
-}
-
-.editor-styles-wrapper .gallery-caption {
 }
 
 /* =WORDPRESS GALLERY SUPPORT
