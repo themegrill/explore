@@ -74,7 +74,10 @@ th {
 	font-weight: bold;
 }
 
-th, td {
+th,
+td,
+.wp-block-table th,
+.wp-block-table td {
 	border: 1px solid #eaeaea;
 	padding: 6px 10px;
 }
@@ -281,7 +284,9 @@ li > ol {
 /* =BLOCKQUOTE
 ----------------------------------------------- */
 blockquote,
-.wp-block-quote{
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right {
 	font-style: italic;
 	font-weight: normal;
 	padding: 20px;
@@ -305,6 +310,10 @@ blockquote cite,
 	font-weight: 300;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+}
+
+blockquote.wp-block-quote.has-text-align-right {
+	border-right: 0;
 }
 
 /* =FORMS

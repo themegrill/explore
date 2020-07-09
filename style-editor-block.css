@@ -17,8 +17,6 @@
 }
 .editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input { 
     font-size: 26px;
-    line-height: 32px;
-    color: #444444;
     padding-bottom: 18px;
 	color: #222222;
 	font-weight: normal;
@@ -63,7 +61,8 @@
 	font-size: 19px;
 }
 
-.editor-styles-wrapper hr {
+.editor-styles-wrapper hr,
+.editor-styles-wrapper .wp-block-separator {
 	border-color: #eaeaea;
 	border-style: solid none none;
 	border-width: 1px 0 0;
@@ -130,6 +129,25 @@
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
+.editor-styles-wrapper th {
+	font-weight: bold;
+}
+
+.editor-styles-wrapper th,
+.editor-styles-wrapper td,
+.editor-styles-wrapper .wp-block-table th,
+.editor-styles-wrapper .wp-block-table td {
+	border: 1px solid #eaeaea;
+	padding: 6px 10px;
+}
+
+.editor-styles-wrapper caption,
+.editor-styles-wrapper th,
+.editor-styles-wrapper td {
+	text-align: left;
+}
+
 /* =SUPERCRIPT AND SUBSCRIPT
 ----------------------------------------------- */
 .editor-styles-wrapper sup, 
@@ -179,7 +197,9 @@
 
 /* =BLOCKQUOTE
 ----------------------------------------------- */
-.editor-styles-wrapper blockquote {
+.editor-styles-wrapper blockquote,
+.editor-styles-wrapper blockquote.is-style-large,
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
 	font-style: italic;
 	font-weight: normal;
 	padding: 20px;
@@ -194,13 +214,22 @@
 	font-style: normal;
 }
 
-.editor-styles-wrapper blockquote cite {
+.editor-styles-wrapper blockquote cite,
+.editor-styles-wrapper .wp-block-quote cite,
+.editor-styles-wrapper .wp-block-quote.is-style-large cite,
+.editor-styles-wrapper .wp-block-quote.has-text-align-right cite {
 	color: #666666;
 	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 }
+
+.editor-styles-wrapper .wp-block blockquote.has-text-align-right {
+	border-right: 0;
+	border-left: 0;
+}
+
 /* =FORMS
 ----------------------------------------------- */
 .editor-styles-wrapper input,.editor-styles-wrapper textarea {
@@ -212,8 +241,6 @@
 .editor-styles-wrapper input[type="search"],
 .editor-styles-wrapper input[type="password"],
 .editor-styles-wrapper textarea {
-	-moz-appearance: none !important;
-	-webkit-appearance: none !important;
 	appearance: none !important;
 }
 
@@ -241,29 +268,9 @@
 	border: 1px solid #eaeaea;
 }
 
-.editor-styles-wrapper input.s {
-	background-color: #ffffff;
-	border: 1px solid #eaeaea;
-	color: #666666;
-	height: 36px;
-	margin: 0;
-	padding: 10px;
-	width: 140px;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.editor-styles-wrapper input.s:focus {
-	padding-left: 10px;
-	border-color: #eaeaea;
-	text-indent: 0;
-}
-
-.editor-styles-wrapper .explore-button:not(.components-button):not([role=presentation]):not(.mce-open),
 .editor-styles-wrapper input[type="reset"],
 .editor-styles-wrapper input[type="button"],
-.editor-styles-wrapper input[type="submit"],
-.editor-styles-wrapper button {
+.editor-styles-wrapper input[type="submit"] {
 	color: #ffffff;
 	display: inline-block;
 	margin-bottom: 30px;
@@ -280,36 +287,10 @@
 	font-size: 15px;
 }
 
-.editor-styles-wrapper .explore-button:not(.components-button):not([role=presentation]):not(.mce-open),
 .editor-styles-wrapper input[type="reset"]:hover,
 .editor-styles-wrapper input[type="button"]:hover,
-.editor-styles-wrapper input[type="submit"]:hover,
-.editor-styles-wrapper button:hover {
-	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+.editor-styles-wrapper input[type="submit"]:hover {
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-}
-
-.editor-styles-wrapper .previous a,
-.editor-styles-wrapper .next a {
-	color: #666666;
-	padding: 5px 25px;
-	cursor: pointer;
-	border: 1px solid #eaeaea;
-	font-size: 15px;
-}
-
-.editor-styles-wrapper .previous a:hover,
-.editor-styles-wrapper .next a:hover {
-	color: #4cb0c6;
-}
-
-.editor-styles-wrapper input[type="reset"]:active,
-.editor-styles-wrapper input[type="button"]:active,
-.editor-styles-wrapper input[type="submit"]:active {
-	-webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* =LINKS
@@ -319,50 +300,10 @@
 	text-decoration: none;
 }
 
-.editor-styles-wrapper a:focus,.editor-styles-wrapper a:active,.editor-styles-wrapper a:hover {
+.editor-styles-wrapper a:focus,
+.editor-styles-wrapper a:active,
+.editor-styles-wrapper a:hover {
 	text-decoration: none;
-}
-
-/* =IMAGES
------------------------------------------------ */
-.editor-styles-wrapper figure {
-	margin: 0;
-	text-align: center;
-}
-
-.editor-styles-wrapper img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
-	margin-bottom: 18px;
-}
-
-.editor-styles-wrapper .entry-content img,.editor-styles-wrapper .comment-content img,
-.editor-styles-wrapper .widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
-}
-
-.editor-styles-wrapper img.size-full,
-.editor-styles-wrapper img.size-large {
-	max-width: 100%;
-	height: auto;
-}
-
-.editor-styles-wrapper .entry-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-
-.editor-styles-wrapper img.alignleft,
-.editor-styles-wrapper img.alignright,
-.editor-styles-wrapper img.aligncenter {
-	margin-bottom: 1.625em;
-}
-
-.editor-styles-wrapper img#wpstats {
-	display: none;
 }
 
 /* =ALIGNMENT
@@ -479,6 +420,7 @@
 	line-height: 1.2;
 	padding-top: 5px;
 }
+
 .editor-styles-wrapper .wp-block-gallery ol,
 .editor-styles-wrapper .wp-block-gallery ul {
 	margin: 0;
