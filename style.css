@@ -1566,6 +1566,15 @@ a.slide-next:hover {
 	display: flex;
 }
 
+ul.blocks-gallery-grid,
+ul.wp-block-gallery {
+	padding: 0;
+}
+
+ul.blocks-gallery-grid img,
+ul.wp-block-gallery img {
+	margin-bottom: 0;
+}
 
 /* =COMMENTS
 ----------------------------------------------- */
