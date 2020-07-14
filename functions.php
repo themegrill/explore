@@ -125,7 +125,9 @@ function explore_setup() {
 endif;
 
 /**
- * Enqueue Google fonts and editor styles.
+ * Enqueue block editor styles.
+ *
+ * @since Explore 1.1.3
  */
 function explore_block_editor_styles() {
 	wp_enqueue_style( 'explore-editor-googlefonts', '//fonts.googleapis.com/css2?family=PT+Sans' );
