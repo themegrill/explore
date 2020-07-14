@@ -52,6 +52,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
+* Enhancement - Update protocol to prevent not secure issue.
 * Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 
 = Version 1.1.2 - 2020-02-21 =
