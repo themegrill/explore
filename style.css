@@ -2180,8 +2180,8 @@ a#scroll-up:hover {
 
 .no_sidebar_full_width.boxed #primary .entry-content > .alignfull,
 .no_sidebar_content_centered.boxed #primary .entry-content > .alignfull {
-	margin-left: -50px;
-	margin-right: -50px;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .no_sidebar_full_width.boxed_layout #primary .entry-content > .alignfull.wp-block-cover,
