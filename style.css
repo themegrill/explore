@@ -2170,8 +2170,8 @@ a#scroll-up:hover {
 
 .no_sidebar_full_width #primary .entry-content >.alignwide,
 .no_sidebar_content_centered #primary .entry-content > .alignwide {
-	margin-left: -30px;
-	margin-right: -30px;
+	margin-left: -50px;
+	margin-right: -50px;
 	max-width: unset;
 	width: unset;
 	padding-right: 0 !important;
@@ -2668,8 +2668,8 @@ iframe#wp-custom-header-video {
 @media screen and (max-width: 1500px) {
 	.no_sidebar_full_width #primary .entry-content > .alignwide,
 	.no_sidebar_content_centered #primary .entry-content > .alignwide {
-		margin-left: -50px;
-		margin-right: -50px;
+		margin-left: -30px;
+		margin-right: -30px;
 	}
 }
 
