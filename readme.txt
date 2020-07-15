@@ -55,6 +55,7 @@ and we will include it within the theme from next version update.
 * Enhancement - Gutenberg compatibility.
 * Tweak - Change http protocol to https.
 * Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+* Remove - Unrequired deprecated demo config for theme demo lists.
 
 = Version 1.1.2 - 2020-02-21 =
 * Tweak - Update `screen-reader-text` CSS.
