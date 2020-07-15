@@ -213,7 +213,8 @@
 	border-right: 3px solid #4cb0c6;
 }
 
-.editor-styles-wrapper .wp-block-quote.has-text-align-center {
+.editor-styles-wrapper .wp-block-quote.has-text-align-center,
+.editor-styles-wrapper blockquote.is-style-large.has-text-align-center {
 	border: 1px solid #eaeaea;
 }
 
