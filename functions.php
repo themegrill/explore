@@ -189,13 +189,6 @@ require_once( EXPLORE_ADMIN_DIR . '/meta-boxes.php' );
 require_once( EXPLORE_WIDGETS_DIR . '/widgets.php' );
 
 /**
- * Load Demo Importer Configs.
- */
-if ( class_exists( 'TG_Demo_Importer' ) ) {
-  require get_template_directory() . '/inc/demo-config.php';
-}
-
-/**
  * Assign the Explore version to a variable.
  */
 $theme            = wp_get_theme( 'explore' );
