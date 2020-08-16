@@ -181,14 +181,8 @@ define( 'EXPLORE_THEME_VERSION', $explore_theme->get( 'Version' ) );
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
 	require( EXPLORE_ADMIN_DIR . '/class-explore-admin.php' );
-	require( EXPLORE_ADMIN_DIR . '/tdi-notice.php' );
 	require( EXPLORE_ADMIN_DIR . '/class-explore-welcome-notice.php' );
+	require( EXPLORE_ADMIN_DIR . '/class-explore-dashboard.php' );
+	require( EXPLORE_ADMIN_DIR . '/class-explore-upgrade-notice.php' );
 	require( EXPLORE_ADMIN_DIR . '/class-explore-theme-review-notice.php' );
 }
-
-/**
- * Load TGMPA Configs.
- */
-require_once( EXPLORE_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( EXPLORE_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-explore.php' );
-
