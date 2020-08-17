@@ -98,7 +98,6 @@ class Explore_Dashboard {
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'explore' ) . '</a>', esc_url( 'https://docs.themegrill.com/explore' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'explore' ) . '</a>', esc_url( 'https://demo.themegrill.com/explore-demos' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'explore' ) . '</a>', esc_url( 'https://themegrill.com/themes/explore' ) ); ?></li>
 						</ul>
 					</div>
 

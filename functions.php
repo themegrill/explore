@@ -183,6 +183,5 @@ if ( is_admin() ) {
 	require( EXPLORE_ADMIN_DIR . '/class-explore-admin.php' );
 	require( EXPLORE_ADMIN_DIR . '/class-explore-welcome-notice.php' );
 	require( EXPLORE_ADMIN_DIR . '/class-explore-dashboard.php' );
-	require( EXPLORE_ADMIN_DIR . '/class-explore-upgrade-notice.php' );
 	require( EXPLORE_ADMIN_DIR . '/class-explore-theme-review-notice.php' );
 }
