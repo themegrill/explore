@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.1.4 - 2020-08-17 =
 * Tweak - Add and improve theme-related notices.
 * Remove - TGMPA library to recommend plugins
 

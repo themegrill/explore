@@ -58,7 +58,7 @@ function explore_customize_register( $wp_customize ) {
          }
          ?>
          <div align="center" style="padding:5px; background-color:#fafafa;border: 1px solid #CCC;margin-bottom: 10px;">
-            <strong><?php esc_attr_e( 'If you like our work. Buy us a beer.', 'explore' ); ?></strong>
+            <strong><?php esc_html_e( 'If you like our work. Buy us a beer.', 'explore' ); ?></strong>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                <input type="hidden" name="cmd" value="_s-xclick">
                <input type="hidden" name="hosted_button_id" value="8AHDCA8CDGAJG">
