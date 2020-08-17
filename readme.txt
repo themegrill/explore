@@ -13,11 +13,6 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
-* Images in the screenshot is from http://pixabay.com/ link. License: CC0 Public Domain
-  Links: https://pixabay.com/en/startup-meeting-brainstorming-594091/
-         https://pixabay.com/en/japan-tokyo-architecture-building-218615/
-         https://pixabay.com/en/summer-beach-seagulls-deckchairs-814679/
-         https://pixabay.com/en/christmas-milk-cookies-santa-1106991/
 * Bxslider by Steven Wanderski released under | WTFPL Licensed | License Info Url: http://bxslider.com/faqs
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed | License Info Url: https://github.com/afarkas/html5shiv
 * FitVids by Chris Coyier and Paravel | WTFPL Licensed | License Info Url: https://github.com/davatron5000/FitVids.js
@@ -54,6 +49,12 @@ and we will include it within the theme from next version update.
 = TBD =
 * Tweak - Add and improve theme-related notices.
 * Remove - TGMPA library to recommend plugins
+
+= Version 1.1.3 - 2020-07-15 =
+* Enhancement - Gutenberg compatibility.
+* Tweak - Change http protocol to https.
+* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+* Remove - Unrequired deprecated demo config for theme demo lists.
 
 = Version 1.1.2 - 2020-02-21 =
 * Tweak - Update `screen-reader-text` CSS.

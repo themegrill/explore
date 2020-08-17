@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Explore 1.1.2\n"
+"Project-Id-Version: Explore 1.1.3\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-02-21 05:22:34+00:00\n"
+"POT-Creation-Date: 2020-07-15 12:16:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -60,15 +60,15 @@ msgstr ""
 msgid "Tagged on: "
 msgstr ""
 
-#: functions.php:82
+#: functions.php:88
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:83
+#: functions.php:89
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:90
 msgid "Footer Menu"
 msgstr ""
 
@@ -148,6 +148,7 @@ msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
 #: inc/admin/class-explore-admin.php:210
+#: inc/admin/class-explore-theme-review-notice.php:105
 msgid "Got theme support question?"
 msgstr ""
 
@@ -213,6 +214,28 @@ msgstr ""
 
 #: inc/admin/class-explore-admin.php:332
 msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: inc/admin/class-explore-theme-review-notice.php:79
+#. Translators: %1$s current user display name.
+msgid ""
+"Howdy, %1$s! It seems that you have been using this theme for more than 15 "
+"day. We hope you are happy with everything that the theme has to offer. If "
+"you can spare a minute, please help us by leaving a 5-star review on "
+"WordPress.org.  By spreading the love, we can continue to develop new "
+"amazing features in the future, for free!"
+msgstr ""
+
+#: inc/admin/class-explore-theme-review-notice.php:90
+msgid "Sure"
+msgstr ""
+
+#: inc/admin/class-explore-theme-review-notice.php:95
+msgid "Maybe later"
+msgstr ""
+
+#: inc/admin/class-explore-theme-review-notice.php:100
+msgid "I already did"
 msgstr ""
 
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
@@ -542,10 +565,6 @@ msgstr ""
 
 #: inc/customizer.php:634
 msgid "Enter link to redirect for the second button."
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Explore"
 msgstr ""
 
 #: inc/functions.php:371
@@ -1252,6 +1271,10 @@ msgid ""
 "This is an example widget to show how the %s sidebar looks by default. You "
 "can add custom widgets from the %swidgets screen%s in the admin. If custom "
 "widgets are added then this will be replaced by those widgets."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Explore"
 msgstr ""
 
 #. Theme URI of the plugin/theme
