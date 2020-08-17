@@ -173,13 +173,6 @@ define( 'EXPLORE_ADMIN_CSS_URL', EXPLORE_ADMIN_URL . '/css' );
 /** Load functions */
 require_once( EXPLORE_INCLUDES_DIR . '/custom-header.php' );
 require_once( EXPLORE_INCLUDES_DIR . '/functions.php' );
-/**
- * Admin.
- */
-if ( is_admin() ) {
-	require_once( EXPLORE_ADMIN_DIR . '/tdi-notice.php' );
-  require ( EXPLORE_ADMIN_DIR . '/class-explore-theme-review-notice.php' );
-}
 require_once( EXPLORE_INCLUDES_DIR . '/customizer.php' );
 require_once( EXPLORE_INCLUDES_DIR . '/header-functions.php' );
 
@@ -191,17 +184,14 @@ require_once( EXPLORE_WIDGETS_DIR . '/widgets.php' );
 /**
  * Assign the Explore version to a variable.
  */
-$theme            = wp_get_theme( 'explore' );
-$explore_version = $theme['Version'];
+$explore_theme = wp_get_theme( 'explore' );
+
+define( 'EXPLORE_THEME_VERSION', $explore_theme->get( 'Version' ) );
 
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-explore-admin.php';
+	require( EXPLORE_ADMIN_DIR . '/class-explore-admin.php' );
+	require( EXPLORE_ADMIN_DIR . '/class-explore-welcome-notice.php' );
+	require( EXPLORE_ADMIN_DIR . '/class-explore-dashboard.php' );
+	require( EXPLORE_ADMIN_DIR . '/class-explore-theme-review-notice.php' );
 }
-
-/**
- * Load TGMPA Configs.
- */
-require_once( EXPLORE_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( EXPLORE_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-explore.php' );
-?>

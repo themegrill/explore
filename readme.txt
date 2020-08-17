@@ -46,6 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Add and improve theme-related notices.
+* Remove - TGMPA library to recommend plugins
+
 = Version 1.1.3 - 2020-07-15 =
 * Enhancement - Gutenberg compatibility.
 * Tweak - Change http protocol to https.
