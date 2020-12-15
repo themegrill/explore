@@ -49,6 +49,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 = Version 1.1.4 - 2020-08-17 =
 * Tweak - Add and improve theme-related notices.
+* Tweak - Update footer credit link with `rel="nofollow"` attributes.
 * Remove - TGMPA library to recommend plugins
 
 = Version 1.1.3 - 2020-07-15 =
