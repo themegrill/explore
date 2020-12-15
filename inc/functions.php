@@ -461,18 +461,23 @@ add_action( 'explore_footer_copyright', 'explore_footer_copyright', 10 );
  * function to show the footer info, copyright information
  */
 if ( ! function_exists( 'explore_footer_copyright' ) ) :
+
 	function explore_footer_copyright() {
+
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>';
 
-		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'explore' ) . '"><span>' . __( 'WordPress', 'explore' ) . '</span></a>';
+		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'explore' ) . '" rel="nofollow" ><span>' . esc_html__( 'WordPress', 'explore' ) . '</span></a>';
 
-		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/explore' ) . '" target="_blank" title="' . esc_attr__( 'ThemeGrill', 'explore' ) . '" rel="author"><span>' . __( 'ThemeGrill', 'explore' ) . '</span></a>';
+		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/explore' ) . '" target="_blank" title="' . esc_attr__( 'Explore', 'explore' ) . '" rel="nofollow" ><span>' . esc_html__( 'Explore', 'explore' ) . '</span></a>';
 
-		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'explore' ), date( 'Y' ), $site_link ) . '<br>' . sprintf( __( 'Powered by %s.', 'explore' ), $wp_link ) . ' ' . sprintf( __( 'Theme: %1$s by %2$s.', 'explore' ), 'Explore', $tg_link );
+		$default_footer_value = sprintf( esc_html__( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'explore' ), date( 'Y' ), $site_link ) . '<br>' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'explore' ), $tg_link, 'ThemeGrill' ) . ' ' . sprintf( esc_html__( 'Powered by %s.', 'explore' ), $wp_link );
 
 		$explore_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
+
 		echo $explore_footer_copyright;
+
 	}
+
 endif;
 
 /**************************************************************************************/
