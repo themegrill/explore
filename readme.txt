@@ -47,7 +47,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.1.5 -2020-12-17 =
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
 
 = Version 1.1.4 - 2020-08-17 =
