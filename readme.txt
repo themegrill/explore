@@ -11,7 +11,11 @@ External resources linked to the theme.
   Licensed under SIL Open Font License, 1.1
 
 Resources packed within the theme.
-* Images on screenshot is from https://pxhere.com/ link. License: Creative Commons Zero (CC0)
+* Images used on Screenshot. License: Creative Commons Zero (CC0)
+  https://pxhere.com/en/photo/1048702
+  https://pxhere.com/en/photo/834729
+  https://pxhere.com/en/photo/715603
+  https://pxhere.com/en/photo/1004450
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
 * Bxslider by Steven Wanderski released under | WTFPL Licensed | License Info Url: http://bxslider.com/faqs
