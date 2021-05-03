@@ -51,6 +51,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Updated the license information for the images used in the screenshot.
+
 = Version 1.1.6 - 2021-02-24 =
 * Tweak - Update screenshot image.
 
