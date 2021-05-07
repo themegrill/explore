@@ -53,7 +53,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.1.7 - 2021-05-07 =
 * Tweak - Update screenshot image source link.
 
 = Version 1.1.6 - 2021-02-24 =
