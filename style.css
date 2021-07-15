@@ -394,7 +394,6 @@ input[type="submit"],
 button {
 	color: #ffffff;
 	display: inline-block;
-	margin-bottom: 30px;
 	padding: 5px 25px;
 	-moz-appearance: none !important;
 	-webkit-appearance: none !important;
