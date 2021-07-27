@@ -40,10 +40,16 @@ class Explore_Dashboard {
 		/* translators: %s: Theme Name. */
 		$theme_page_name = sprintf( esc_html__( '%s Options', 'explore' ), $theme->Name );
 
-		$page = add_theme_page( $theme_page_name, $theme_page_name, 'edit_theme_options', 'explore-options', array(
-			$this,
-			'option_page'
-		) );
+		$page = add_theme_page(
+			$theme_page_name,
+			$theme_page_name,
+			'edit_theme_options',
+			'explore-options',
+			array(
+				$this,
+				'option_page',
+			)
+		);
 
 		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 	}
@@ -97,7 +103,7 @@ class Explore_Dashboard {
 						<h3><?php esc_html_e( 'Next Steps', 'explore' ); ?></h3>
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'explore' ) . '</a>', esc_url( 'https://docs.themegrill.com/explore' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'explore' ) . '</a>', esc_url( 'https://demo.themegrill.com/explore-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'explore' ) . '</a>', esc_url( 'https://themegrilldemos.com/explore-demos/' ) ); ?></li>
 						</ul>
 					</div>
 
