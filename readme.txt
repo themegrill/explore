@@ -53,7 +53,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.2.1 - 2025-08-12 =
+* Update    - General security measure.
+
+= Version 1.2.0 - 2023-09-18 =
 * Update - Twitter icon.
 
 = Version 1.1.9 - 2023-09-18 =
