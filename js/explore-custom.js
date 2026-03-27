@@ -4,9 +4,39 @@
 
 jQuery(document).ready(function(){
 
-   // For Search Icon Toggle effect added at the top
+	var hideSearchForm = function() {
+		jQuery( '#masthead .search-form-top' ).hide();
+	};
+	// For Search Icon Toggle effect added at the top
    jQuery('.search-top').click(function(){
       jQuery('#masthead .search-form-top').toggle();
+
+	   // focus after some time to fix conflict with toggleClass
+	   setTimeout( function () {
+		   jQuery( '#masthead .search-form input' ).focus();
+	   }, 200 );
+
+	   // For esc key press.
+	   jQuery( document ).on( 'keyup', function ( e ) {
+
+		   // on esc key press.
+		   if ( 27 === e.keyCode ) {
+			   // if search box is opened
+			   if ( jQuery( '#masthead' ).has( '.search-form' ) ) {
+				   hideSearchForm();
+			   }
+
+		   }
+	   } );
+
+	   jQuery( document ).on( 'click', function( e ) {
+		   var container = jQuery( '.search-form-top, .search-top, .search-form input' );
+		   if ( ! container.is( e.target ) ) {
+			   hideSearchForm();
+		   }
+
+	   } );
+
    });
 
    jQuery('.header-widget-controller').click(function(){
